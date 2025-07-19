@@ -43,34 +43,22 @@
             position: relative;
             text-transform: uppercase;
             letter-spacing: 1vw;
-            background: url('./millcovesunset.jpg') repeat-x center / 150% 110%;
+            background: url('./millcovesunset.jpg') no-repeat center / 110% 110%;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: sliding-text-background 80s linear infinite;
+            animation: sliding-text-background 20s ease-in-out infinite;
         }
 
         @keyframes sliding-text-background {
-            0% {
-                background-position: 0px center;
+            0%, 100% {
+                background-position: 0% center;
             }
-            100% {
-                background-position: -100vw center;
+            50% {
+                background-position: 100% center;
             }
         }
 
-        .main-title::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            height: 3px;
-            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb);
-            border-radius: 2px;
-            box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
-        }
 
         .subtitle {
             font-size: 1.2rem;
@@ -122,7 +110,8 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #ff9ff3, #48dbfb, #ff6b6b);
+            background-size: 200% 200%;
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
@@ -130,6 +119,44 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            animation: heat-haze 20s ease-in-out infinite, sun-glow 6s ease-in-out infinite;
+            box-shadow: 
+                0 0 10px rgba(255, 215, 0, 0.7),
+                0 0 20px rgba(255, 202, 87, 0.6),
+                0 0 30px rgba(255, 215, 0, 0.4);
+        }
+
+        @keyframes sun-glow {
+            0%, 100% {
+                box-shadow: 
+                    0 0 8px rgba(255, 215, 0, 0.6),
+                    0 0 15px rgba(255, 202, 87, 0.5),
+                    0 0 25px rgba(255, 215, 0, 0.3);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 
+                    0 0 20px rgba(255, 215, 0, 0.9),
+                    0 0 35px rgba(255, 202, 87, 0.7),
+                    0 0 50px rgba(255, 215, 0, 0.5),
+                    0 0 70px rgba(255, 220, 100, 0.3);
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes heat-haze {
+            0%, 100% {
+                background-position: 0% 50%;
+                filter: hue-rotate(0deg) brightness(1) blur(0px);
+            }
+            33% {
+                background-position: 30% 70%;
+                filter: hue-rotate(2deg) brightness(1.02) blur(0.2px);
+            }
+            66% {
+                background-position: 70% 30%;
+                filter: hue-rotate(-2deg) brightness(0.98) blur(0.1px);
+            }
         }
 
         .mood-letter {
@@ -292,7 +319,7 @@
 
         .horizon-line {
             position: relative;
-            margin: 30px 0;
+            margin: 10px 0;
         }
 
         .horizon-line::before {

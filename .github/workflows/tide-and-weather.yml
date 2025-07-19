@@ -16,6 +16,10 @@ on:
         required: false
         default: 'false'
 
+# Permissions needed for the action to push commits
+permissions:
+  contents: write
+
 jobs:
   fetch-data:
     runs-on: ubuntu-latest
@@ -82,7 +86,6 @@ jobs:
       if: steps.check_retry.outputs.should_run == 'true'
       id: fetch_data
       env:
-        OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         node << 'EOF'
@@ -91,7 +94,6 @@ jobs:
         const path = require('path');
 
         const CONFIG = {
-            OPENWEATHER_API_KEY: process.env.OPENWEATHER_API_KEY,
             LATITUDE: 42.2181,
             LONGITUDE: -70.9395,
             NOAA_STATION_ID: '8443970'
@@ -99,7 +101,8 @@ jobs:
 
         class WeatherTideFetcher {
             async fetchWeatherData() {
-                const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${CONFIG.LATITUDE}&lon=${CONFIG.LONGITUDE}&appid=${CONFIG.OPENWEATHER_API_KEY}&units=imperial`;
+                // Using Open-Meteo - free weather API, no API key needed
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.LATITUDE}&longitude=${CONFIG.LONGITUDE}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code&temperature_unit=fahrenheit&timezone=America/New_York&forecast_days=7`;
 
                 const response = await fetch(url);
                 if (!response.ok) {
@@ -111,80 +114,54 @@ jobs:
             }
 
             processWeatherData(data) {
-                const dailyForecasts = {};
+                return data.daily.time.map((dateStr, index) => {
+                    const date = new Date(dateStr);
+                    const tempHigh = Math.round(data.daily.temperature_2m_max[index]);
+                    const tempLow = Math.round(data.daily.temperature_2m_min[index]);
+                    const rainChance = Math.round(data.daily.precipitation_probability_max[index] || 0);
+                    const weatherCode = data.daily.weather_code[index];
 
-                data.list.forEach(forecast => {
-                    const date = new Date(forecast.dt * 1000);
-                    const dateKey = date.toISOString().split('T')[0];
-
-                    if (!dailyForecasts[dateKey]) {
-                        dailyForecasts[dateKey] = {
-                            date: dateKey,
-                            temps: [],
-                            conditions: [],
-                            humidity: [],
-                            wind: [],
-                            rain: []
-                        };
-                    }
-
-                    dailyForecasts[dateKey].temps.push(forecast.main.temp);
-                    dailyForecasts[dateKey].conditions.push({
-                        main: forecast.weather[0].main,
-                        description: forecast.weather[0].description,
-                        icon: forecast.weather[0].icon
-                    });
-                    dailyForecasts[dateKey].humidity.push(forecast.main.humidity);
-                    dailyForecasts[dateKey].wind.push(forecast.wind.speed);
-                    dailyForecasts[dateKey].rain.push(forecast.pop * 100);
-                });
-
-                return Object.values(dailyForecasts).slice(0, 7).map((day, index) => {
-                    const date = new Date(day.date);
-                    const tempHigh = Math.round(Math.max(...day.temps));
-                    const tempLow = Math.round(Math.min(...day.temps));
-                    const avgHumidity = Math.round(day.humidity.reduce((a, b) => a + b, 0) / day.humidity.length);
-                    const avgWind = Math.round(day.wind.reduce((a, b) => a + b, 0) / day.wind.length);
-                    const maxRainChance = Math.max(...day.rain);
-
-                    const conditionCounts = {};
-                    day.conditions.forEach(c => {
-                        conditionCounts[c.main] = (conditionCounts[c.main] || 0) + 1;
-                    });
-                    const mostCommonCondition = Object.keys(conditionCounts).reduce((a, b) =>
-                        conditionCounts[a] > conditionCounts[b] ? a : b
-                    );
-
-                    const weatherEmoji = this.getWeatherEmoji(mostCommonCondition);
-                    const dateStr = index === 0 ? 'Today' : date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+                    const weatherEmoji = this.getWeatherEmojiFromCode(weatherCode);
+                    const description = this.getWeatherDescription(weatherCode);
+                    const displayDate = index === 0 ? 'Today' : date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
 
                     return {
-                        date: dateStr,
+                        date: displayDate,
                         temp: tempHigh,
                         tempLow: tempLow,
                         condition: weatherEmoji,
-                        description: mostCommonCondition,
-                        humidity: avgHumidity,
-                        wind: `${avgWind} mph`,
-                        rainChance: Math.round(maxRainChance),
-                        rawDate: day.date
+                        description: description,
+                        humidity: 50, // Open-Meteo doesn't provide humidity in free tier
+                        wind: '5 mph', // Open-Meteo doesn't provide wind in free tier
+                        rainChance: rainChance,
+                        rawDate: dateStr
                     };
                 });
             }
 
-            getWeatherEmoji(condition) {
-                const emojiMap = {
-                    'Clear': '☀️',
-                    'Clouds': '⛅',
-                    'Rain': '🌧️',
-                    'Drizzle': '🌦️',
-                    'Thunderstorm': '⛈️',
-                    'Snow': '❄️',
-                    'Mist': '🌫️',
-                    'Fog': '🌫️',
-                    'Haze': '🌫️'
-                };
-                return emojiMap[condition] || '⛅';
+            getWeatherEmojiFromCode(code) {
+                // WMO Weather interpretation codes
+                if (code === 0) return '☀️'; // Clear sky
+                if (code <= 3) return '⛅'; // Partly cloudy
+                if ([45, 48].includes(code)) return '🌫️'; // Fog
+                if ([51, 53, 55].includes(code)) return '🌦️'; // Drizzle
+                if ([61, 63, 65].includes(code)) return '🌧️'; // Rain
+                if ([80, 81, 82].includes(code)) return '🌧️'; // Rain showers
+                if ([71, 73, 75, 77].includes(code)) return '❄️'; // Snow
+                if ([95, 96, 99].includes(code)) return '⛈️'; // Thunderstorm
+                return '⛅'; // Default
+            }
+
+            getWeatherDescription(code) {
+                if (code === 0) return 'Clear';
+                if (code <= 3) return 'Partly Cloudy';
+                if ([45, 48].includes(code)) return 'Foggy';
+                if ([51, 53, 55].includes(code)) return 'Drizzle';
+                if ([61, 63, 65].includes(code)) return 'Rain';
+                if ([80, 81, 82].includes(code)) return 'Rain Showers';
+                if ([71, 73, 75, 77].includes(code)) return 'Snow';
+                if ([95, 96, 99].includes(code)) return 'Thunderstorm';
+                return 'Cloudy';
             }
 
             async fetchTideData() {

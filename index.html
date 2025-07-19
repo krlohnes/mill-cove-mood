@@ -39,13 +39,24 @@
         .main-title {
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 700;
-            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
             margin-bottom: 10px;
             position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1vw;
+            background: url('./millcovesunset.jpg') repeat-x center / 150% 110%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: sliding-text-background 80s linear infinite;
+        }
+
+        @keyframes sliding-text-background {
+            0% {
+                background-position: 0px center;
+            }
+            100% {
+                background-position: -100vw center;
+            }
         }
 
         .main-title::after {
@@ -423,7 +434,7 @@
 <body>
     <div class="container">
         <div class="title-section">
-            <h1 class="main-title">Mill Cove Mood</h1>
+            <h1 class="main-title" data-text="Mill Cove Mood">Mill Cove Mood</h1>
             <div class="horizon-line"></div>
             <p class="subtitle">Weather & Tides for Weymouth, MA</p>
         </div>
@@ -437,7 +448,6 @@
         <div class="footer">
             <p>🌅 Find your perfect Mill Cove moment 🌊</p>
             <p>High tides between noon-8pm + 60°F+ + no rain = MOOD ✨</p>
-        </div>
     </div>
 
     <script>

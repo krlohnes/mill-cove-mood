@@ -1,0 +1,342 @@
+# .github/workflows/fetch-weather-tide.yml
+name: Fetch Weather & Tide Data
+
+on:
+  schedule:
+    # Run daily at midnight UTC
+    - cron: '0 0 * * *'
+    # Retry hours: 1am, 2am, 3am, etc. through 11pm
+    - cron: '0 1-23 * * *'
+
+  # Allow manual trigger for testing
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: 'Force run even if not scheduled'
+        required: false
+        default: 'false'
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Check if retry is needed
+      id: check_retry
+      env:
+        FORCE_RUN: ${{ github.event.inputs.force_run }}
+      run: |
+        # Always run at midnight or if manually forced
+        CURRENT_HOUR=$(date -u +%H)
+        IS_MIDNIGHT=$([[ "$CURRENT_HOUR" == "00" ]] && echo "true" || echo "false")
+        IS_MANUAL=$([[ "$FORCE_RUN" == "true" ]] && echo "true" || echo "false")
+
+        if [[ "$IS_MIDNIGHT" == "true" || "$IS_MANUAL" == "true" ]]; then
+          echo "should_run=true" >> $GITHUB_OUTPUT
+          echo "Daily run or manual trigger - proceeding"
+          exit 0
+        fi
+
+        # For hourly runs, check if we need to retry
+        if [[ -f "data/weather-data.json" ]]; then
+          LAST_SUCCESS=$(node -pe "
+            try {
+              const data = JSON.parse(require('fs').readFileSync('data/weather-data.json', 'utf8'));
+              new Date(data.lastUpdated).toISOString().split('T')[0];
+            } catch(e) {
+              '';
+            }
+          ")
+
+          TODAY=$(date -u +%Y-%m-%d)
+
+          if [[ "$LAST_SUCCESS" == "$TODAY" ]]; then
+            echo "should_run=false" >> $GITHUB_OUTPUT
+            echo "Already have today's data - skipping retry"
+            exit 0
+          else
+            echo "should_run=true" >> $GITHUB_OUTPUT
+            echo "No successful data today - will retry"
+          fi
+        else
+          echo "should_run=true" >> $GITHUB_OUTPUT
+          echo "No data file exists - will try to create"
+        fi
+
+    - name: Setup Node.js
+      if: steps.check_retry.outputs.should_run == 'true'
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Create data directory
+      if: steps.check_retry.outputs.should_run == 'true'
+      run: mkdir -p data
+
+    - name: Fetch weather and tide data
+      if: steps.check_retry.outputs.should_run == 'true'
+      id: fetch_data
+      env:
+        OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        node << 'EOF'
+        // Mill Cove Mood - Weather & Tide Data Fetcher for GitHub Actions
+        const fs = require('fs');
+        const path = require('path');
+
+        const CONFIG = {
+            OPENWEATHER_API_KEY: process.env.OPENWEATHER_API_KEY,
+            LATITUDE: 42.2181,
+            LONGITUDE: -70.9395,
+            NOAA_STATION_ID: '8443970'
+        };
+
+        class WeatherTideFetcher {
+            async fetchWeatherData() {
+                const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${CONFIG.LATITUDE}&lon=${CONFIG.LONGITUDE}&appid=${CONFIG.OPENWEATHER_API_KEY}&units=imperial`;
+
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Weather API error: ${response.status}`);
+                }
+
+                const data = await response.json();
+                return this.processWeatherData(data);
+            }
+
+            processWeatherData(data) {
+                const dailyForecasts = {};
+
+                data.list.forEach(forecast => {
+                    const date = new Date(forecast.dt * 1000);
+                    const dateKey = date.toISOString().split('T')[0];
+
+                    if (!dailyForecasts[dateKey]) {
+                        dailyForecasts[dateKey] = {
+                            date: dateKey,
+                            temps: [],
+                            conditions: [],
+                            humidity: [],
+                            wind: [],
+                            rain: []
+                        };
+                    }
+
+                    dailyForecasts[dateKey].temps.push(forecast.main.temp);
+                    dailyForecasts[dateKey].conditions.push({
+                        main: forecast.weather[0].main,
+                        description: forecast.weather[0].description,
+                        icon: forecast.weather[0].icon
+                    });
+                    dailyForecasts[dateKey].humidity.push(forecast.main.humidity);
+                    dailyForecasts[dateKey].wind.push(forecast.wind.speed);
+                    dailyForecasts[dateKey].rain.push(forecast.pop * 100);
+                });
+
+                return Object.values(dailyForecasts).slice(0, 7).map((day, index) => {
+                    const date = new Date(day.date);
+                    const tempHigh = Math.round(Math.max(...day.temps));
+                    const tempLow = Math.round(Math.min(...day.temps));
+                    const avgHumidity = Math.round(day.humidity.reduce((a, b) => a + b, 0) / day.humidity.length);
+                    const avgWind = Math.round(day.wind.reduce((a, b) => a + b, 0) / day.wind.length);
+                    const maxRainChance = Math.max(...day.rain);
+
+                    const conditionCounts = {};
+                    day.conditions.forEach(c => {
+                        conditionCounts[c.main] = (conditionCounts[c.main] || 0) + 1;
+                    });
+                    const mostCommonCondition = Object.keys(conditionCounts).reduce((a, b) =>
+                        conditionCounts[a] > conditionCounts[b] ? a : b
+                    );
+
+                    const weatherEmoji = this.getWeatherEmoji(mostCommonCondition);
+                    const dateStr = index === 0 ? 'Today' : date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+
+                    return {
+                        date: dateStr,
+                        temp: tempHigh,
+                        tempLow: tempLow,
+                        condition: weatherEmoji,
+                        description: mostCommonCondition,
+                        humidity: avgHumidity,
+                        wind: `${avgWind} mph`,
+                        rainChance: Math.round(maxRainChance),
+                        rawDate: day.date
+                    };
+                });
+            }
+
+            getWeatherEmoji(condition) {
+                const emojiMap = {
+                    'Clear': '☀️',
+                    'Clouds': '⛅',
+                    'Rain': '🌧️',
+                    'Drizzle': '🌦️',
+                    'Thunderstorm': '⛈️',
+                    'Snow': '❄️',
+                    'Mist': '🌫️',
+                    'Fog': '🌫️',
+                    'Haze': '🌫️'
+                };
+                return emojiMap[condition] || '⛅';
+            }
+
+            async fetchTideData() {
+                const startDate = new Date();
+                const endDate = new Date();
+                endDate.setDate(startDate.getDate() + 7);
+
+                const startDateStr = this.formatDateForNOAA(startDate);
+                const endDateStr = this.formatDateForNOAA(endDate);
+
+                const url = `https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&application=NOS.COOPS.TAC.WL&begin_date=${startDateStr}&end_date=${endDateStr}&datum=MLLW&station=${CONFIG.NOAA_STATION_ID}&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
+
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Tide API error: ${response.status}`);
+                }
+
+                const data = await response.json();
+                return this.processTideData(data);
+            }
+
+            formatDateForNOAA(date) {
+                return date.getFullYear() +
+                       String(date.getMonth() + 1).padStart(2, '0') +
+                       String(date.getDate()).padStart(2, '0');
+            }
+
+            processTideData(data) {
+                if (!data.predictions) {
+                    throw new Error('No tide data returned from NOAA API');
+                }
+
+                const tidesByDate = {};
+
+                data.predictions.forEach(prediction => {
+                    const date = prediction.t.split(' ')[0];
+                    const time = this.formatTime(prediction.t.split(' ')[1]);
+                    const type = prediction.type;
+
+                    if (!tidesByDate[date]) {
+                        tidesByDate[date] = { high: [], low: [] };
+                    }
+
+                    if (type === 'H') {
+                        tidesByDate[date].high.push(time);
+                    } else {
+                        tidesByDate[date].low.push(time);
+                    }
+                });
+
+                return tidesByDate;
+            }
+
+            formatTime(timeStr) {
+                const [hours, minutes] = timeStr.split(':');
+                const hour = parseInt(hours);
+                const ampm = hour >= 12 ? 'PM' : 'AM';
+                const displayHour = hour % 12 || 12;
+                return `${displayHour}:${minutes} ${ampm}`;
+            }
+
+            checkMoodDay(weather, tides) {
+                const hasGoodTide = tides.high.some(time => {
+                    const [timeStr, ampm] = time.split(' ');
+                    const [hours] = timeStr.split(':');
+                    const hour24 = ampm === 'PM' && hours !== '12' ? parseInt(hours) + 12 :
+                                  ampm === 'AM' && hours === '12' ? 0 : parseInt(hours);
+                    return hour24 >= 12 && hour24 <= 20;
+                });
+
+                const goodTemp = weather.temp >= 60;
+                const lowRain = weather.rainChance < 30;
+
+                return hasGoodTide && goodTemp && lowRain;
+            }
+
+            async run() {
+                try {
+                    console.log('Fetching weather data...');
+                    const weatherData = await this.fetchWeatherData();
+
+                    console.log('Fetching tide data...');
+                    const tideData = await this.fetchTideData();
+
+                    console.log('Combining data...');
+                    const combinedData = weatherData.map(day => {
+                        const tides = tideData[day.rawDate] || { high: [], low: [] };
+                        const isMoodDay = this.checkMoodDay(day, tides);
+
+                        return {
+                            ...day,
+                            tides,
+                            isMoodDay
+                        };
+                    });
+
+                    // Add metadata
+                    const output = {
+                        lastUpdated: new Date().toISOString(),
+                        location: 'Weymouth, MA (Mill Cove)',
+                        source: 'OpenWeatherMap & NOAA',
+                        data: combinedData
+                    };
+
+                    // Save to file
+                    fs.writeFileSync('data/weather-data.json', JSON.stringify(output, null, 2));
+                    console.log('Data saved successfully');
+
+                    return output;
+
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+
+                    // Check if we have existing data
+                    const dataFile = 'data/weather-data.json';
+                    if (fs.existsSync(dataFile)) {
+                        console.log('Keeping existing data due to fetch failure');
+
+                        // Update the existing file with failure info
+                        try {
+                            const existingData = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+                            existingData.lastAttempted = new Date().toISOString();
+                            existingData.lastError = error.message;
+                            existingData.failedAttempts = (existingData.failedAttempts || 0) + 1;
+
+                            fs.writeFileSync(dataFile, JSON.stringify(existingData, null, 2));
+                            console.log('Updated existing data with failure info');
+                        } catch (updateError) {
+                            console.error('Could not update existing data:', updateError);
+                        }
+                    }
+
+                    process.exit(1);
+                }
+            }
+        }
+
+        const fetcher = new WeatherTideFetcher();
+        fetcher.run();
+        EOF
+
+    - name: Commit and push data (only if successful)
+      if: steps.check_retry.outputs.should_run == 'true' && success()
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/weather-data.json
+
+        # Only commit if there are changes
+        if ! git diff --staged --quiet; then
+          git commit -m "Update weather and tide data - $(date -u +"%Y-%m-%d %H:%M UTC")"
+          git push
+        else
+          echo "No changes to commit"
+        fi

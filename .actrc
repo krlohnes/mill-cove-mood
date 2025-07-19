@@ -1,0 +1,4 @@
+# Act configuration file
+# Use medium-sized Ubuntu runner for better compatibility
+-P ubuntu-latest=catthehacker/ubuntu:act-latest
+--container-architecture linux/amd64

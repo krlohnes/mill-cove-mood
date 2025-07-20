@@ -1,11 +1,13 @@
 // Mill Cove Mood - Service Worker
-const CACHE_NAME = 'mill-cove-mood-v1';
+const CACHE_NAME = 'mill-cove-mood-v2';
+const DATA_CACHE_NAME = 'mill-cove-mood-data-v1';
 const urlsToCache = [
   './',
   './index.html',
   './manifest.json',
   './icon-192.svg',
-  './icon-512.svg'
+  './icon-512.svg',
+  './millcovesunset.jpg'
 ];
 
 // Install event - cache resources
@@ -19,54 +21,67 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Fetch event - serve from cache when offline
+// Fetch event - network-first strategy for data, cache-first for assets
 self.addEventListener('fetch', (event) => {
+  // Handle weather data with network-first strategy (fresh data priority)
+  if (event.request.url.includes('weather-data.json')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response.status === 200) {
+            // Cache fresh data with timestamp
+            const responseToCache = response.clone();
+            caches.open(DATA_CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseToCache);
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          // Network failed, try cached data as fallback
+          console.log('Network failed, serving cached weather data');
+          return caches.match(event.request);
+        })
+    );
+    return;
+  }
+
+  // Handle app assets with cache-first strategy
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        // Return cached version or fetch from network
+        // Return cached version if available
         if (response) {
           return response;
         }
-        
-        // For weather data, try network first, fallback to cache
-        if (event.request.url.includes('weather-data.json')) {
-          return fetch(event.request)
-            .then((response) => {
-              // Check if we received a valid response
-              if (!response || response.status !== 200 || response.type !== 'basic') {
-                return response;
-              }
 
-              // Clone the response for caching
-              const responseToCache = response.clone();
+        // Fetch from network and cache for next time
+        return fetch(event.request).then((response) => {
+          // Don't cache non-successful responses
+          if (!response || response.status !== 200 || response.type !== 'basic') {
+            return response;
+          }
 
-              caches.open(CACHE_NAME)
-                .then((cache) => {
-                  cache.put(event.request, responseToCache);
-                });
+          const responseToCache = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
 
-              return response;
-            })
-            .catch(() => {
-              // Network failed, try to return cached weather data
-              return caches.match(event.request);
-            });
-        }
-        
-        // For other requests, try network first
-        return fetch(event.request);
+          return response;
+        });
       })
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
+  const cacheWhitelist = [CACHE_NAME, DATA_CACHE_NAME];
+
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
+          if (!cacheWhitelist.includes(cacheName)) {
             console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
@@ -74,4 +89,7 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
+
+  // Take control of all clients immediately
+  return self.clients.claim();
 });

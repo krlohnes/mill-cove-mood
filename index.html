@@ -10,6 +10,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Mill Cove Mood">
     <meta name="theme-color" content="#ff6b6b">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <style>
         * {
             margin: 0;
@@ -645,8 +648,9 @@
             grid.innerHTML = '<div class="loading">Loading Mill Cove conditions...</div>';
             
             try {
-                // Try to load real data from GitHub Actions
-                const response = await fetch('data/weather-data.json');
+                // Add cache-busting timestamp to ensure fresh data
+                const timestamp = new Date().getTime();
+                const response = await fetch(`data/weather-data.json?t=${timestamp}`);
                 
                 if (response.ok) {
                     const jsonData = await response.json();
@@ -703,6 +707,20 @@
 
         // Load the weather data when the page loads
         document.addEventListener('DOMContentLoaded', loadWeatherData);
+
+        // Refresh data when user returns to the app
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                console.log('Page became visible, refreshing data...');
+                loadWeatherData();
+            }
+        });
+
+        // Also refresh when window gains focus
+        window.addEventListener('focus', () => {
+            console.log('Window gained focus, refreshing data...');
+            loadWeatherData();
+        });
 
         // Register service worker
         if ('serviceWorker' in navigator) {

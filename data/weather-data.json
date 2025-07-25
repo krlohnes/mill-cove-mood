@@ -1,39 +1,17 @@
 {
-  "lastUpdated": "2025-07-24T05:30:21.751Z",
+  "lastUpdated": "2025-07-25T05:31:50.425Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 87,
-      "tempLow": 64,
+      "temp": 93,
+      "tempLow": 70,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 1,
-      "rawDate": "2025-07-24",
-      "tides": {
-        "high": [
-          "11:35 AM",
-          "11:44 PM"
-        ],
-        "low": [
-          "5:21 AM",
-          "5:28 PM"
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Fri, Jul 25",
-      "temp": 96,
-      "tempLow": 70,
-      "condition": "🌧️",
-      "description": "Rain Showers",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 43,
+      "rainChance": 36,
       "rawDate": "2025-07-25",
       "tides": {
         "high": [
@@ -48,13 +26,13 @@
     },
     {
       "date": "Sat, Jul 26",
-      "temp": 82,
-      "tempLow": 67,
+      "temp": 73,
+      "tempLow": 64,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 18,
+      "rainChance": 0,
       "rawDate": "2025-07-26",
       "tides": {
         "high": [
@@ -70,13 +48,13 @@
     },
     {
       "date": "Sun, Jul 27",
-      "temp": 87,
-      "tempLow": 66,
-      "condition": "🌧️",
-      "description": "Rain Showers",
+      "temp": 71,
+      "tempLow": 63,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 31,
+      "rainChance": 14,
       "rawDate": "2025-07-27",
       "tides": {
         "high": [
@@ -88,17 +66,17 @@
           "7:58 PM"
         ]
       },
-      "isMoodDay": false
+      "isMoodDay": true
     },
     {
       "date": "Mon, Jul 28",
-      "temp": 91,
-      "tempLow": 66,
-      "condition": "🌫️",
-      "description": "Foggy",
+      "temp": 89,
+      "tempLow": 59,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 27,
+      "rainChance": 11,
       "rawDate": "2025-07-28",
       "tides": {
         "high": [
@@ -114,13 +92,13 @@
     },
     {
       "date": "Tue, Jul 29",
-      "temp": 95,
-      "tempLow": 72,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 96,
+      "tempLow": 68,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 14,
+      "rainChance": 22,
       "rawDate": "2025-07-29",
       "tides": {
         "high": [
@@ -136,13 +114,13 @@
     },
     {
       "date": "Wed, Jul 30",
-      "temp": 89,
-      "tempLow": 71,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 92,
+      "tempLow": 70,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 22,
+      "rainChance": 13,
       "rawDate": "2025-07-30",
       "tides": {
         "high": [
@@ -152,6 +130,28 @@
         "low": [
           "9:55 AM",
           "10:22 PM"
+        ]
+      },
+      "isMoodDay": true
+    },
+    {
+      "date": "Thu, Jul 31",
+      "temp": 80,
+      "tempLow": 66,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 16,
+      "rawDate": "2025-07-31",
+      "tides": {
+        "high": [
+          "4:33 AM",
+          "4:56 PM"
+        ],
+        "low": [
+          "10:40 AM",
+          "11:13 PM"
         ]
       },
       "isMoodDay": true

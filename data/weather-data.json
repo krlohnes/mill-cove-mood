@@ -1,34 +1,12 @@
 {
-  "lastUpdated": "2025-07-27T05:30:20.083Z",
+  "lastUpdated": "2025-07-28T05:33:18.133Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 77,
-      "tempLow": 61,
-      "condition": "🌦️",
-      "description": "Drizzle",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 39,
-      "rawDate": "2025-07-27",
-      "tides": {
-        "high": [
-          "1:25 AM",
-          "2:02 PM"
-        ],
-        "low": [
-          "7:46 AM",
-          "7:58 PM"
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Mon, Jul 28",
-      "temp": 85,
-      "tempLow": 69,
+      "temp": 84,
+      "tempLow": 67,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
@@ -73,8 +51,8 @@
       "date": "Wed, Jul 30",
       "temp": 95,
       "tempLow": 72,
-      "condition": "🌫️",
-      "description": "Foggy",
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
       "rainChance": 23,
@@ -152,6 +130,28 @@
         "low": [
           "12:06 AM",
           "12:17 PM"
+        ]
+      },
+      "isMoodDay": true
+    },
+    {
+      "date": "Sun, Aug 3",
+      "temp": 87,
+      "tempLow": 60,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 2,
+      "rawDate": "2025-08-03",
+      "tides": {
+        "high": [
+          "7:13 AM",
+          "7:26 PM"
+        ],
+        "low": [
+          "1:01 AM",
+          "1:08 PM"
         ]
       },
       "isMoodDay": true

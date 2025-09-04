@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2025-09-03T05:20:55.174Z",
+  "lastUpdated": "2025-09-04T00:47:12.870Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 78,
-      "tempLow": 53,
+      "temp": 80,
+      "tempLow": 51,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
@@ -14,144 +14,207 @@
       "rainChance": 0,
       "rawDate": "2025-09-03",
       "tides": {
-        "high": [
-          "8:29 AM",
-          "8:37 PM"
-        ],
-        "low": [
-          "2:13 AM",
-          "2:19 PM"
-        ]
+        "high": [],
+        "low": []
       },
-      "isMoodDay": true
+      "isMoodDay": false
     },
     {
       "date": "Thu, Sep 4",
-      "temp": 82,
+      "temp": 81,
       "tempLow": 53,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "condition": "☀️",
+      "description": "Clear",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 3,
+      "rainChance": 0,
       "rawDate": "2025-09-04",
       "tides": {
         "high": [
-          "9:22 AM",
-          "9:30 PM"
+          {
+            "time": "9:22 AM",
+            "height": "8.3"
+          },
+          {
+            "time": "9:30 PM",
+            "height": "9.8"
+          }
         ],
         "low": [
-          "3:07 AM",
-          "3:14 PM"
+          {
+            "time": "3:07 AM",
+            "height": "1.3"
+          },
+          {
+            "time": "3:14 PM",
+            "height": "1.9"
+          }
         ]
       },
       "isMoodDay": false
     },
     {
       "date": "Fri, Sep 5",
-      "temp": 83,
-      "tempLow": 63,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 82,
+      "tempLow": 62,
+      "condition": "🌧️",
+      "description": "Rain",
       "humidity": 50,
       "wind": "5 mph",
       "rainChance": 23,
       "rawDate": "2025-09-05",
       "tides": {
         "high": [
-          "10:09 AM",
-          "10:18 PM"
+          {
+            "time": "10:09 AM",
+            "height": "8.8"
+          },
+          {
+            "time": "10:18 PM",
+            "height": "10.2"
+          }
         ],
         "low": [
-          "3:55 AM",
-          "4:04 PM"
+          {
+            "time": "3:55 AM",
+            "height": "0.8"
+          },
+          {
+            "time": "4:04 PM",
+            "height": "1.3"
+          }
         ]
       },
       "isMoodDay": false
     },
     {
       "date": "Sat, Sep 6",
-      "temp": 87,
-      "tempLow": 65,
+      "temp": 86,
+      "tempLow": 67,
       "condition": "🌦️",
       "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 43,
+      "rainChance": 45,
       "rawDate": "2025-09-06",
       "tides": {
         "high": [
-          "10:52 AM",
-          "11:03 PM"
+          {
+            "time": "10:52 AM",
+            "height": "9.4"
+          },
+          {
+            "time": "11:03 PM",
+            "height": "10.6"
+          }
         ],
         "low": [
-          "4:40 AM",
-          "4:52 PM"
+          {
+            "time": "4:40 AM",
+            "height": "0.3"
+          },
+          {
+            "time": "4:52 PM",
+            "height": "0.7"
+          }
         ]
       },
       "isMoodDay": false
     },
     {
       "date": "Sun, Sep 7",
-      "temp": 76,
-      "tempLow": 61,
+      "temp": 77,
+      "tempLow": 57,
       "condition": "🌦️",
       "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 44,
+      "rainChance": 50,
       "rawDate": "2025-09-07",
       "tides": {
         "high": [
-          "11:33 AM",
-          "11:48 PM"
+          {
+            "time": "11:33 AM",
+            "height": "10.0"
+          },
+          {
+            "time": "11:48 PM",
+            "height": "10.9"
+          }
         ],
         "low": [
-          "5:23 AM",
-          "5:38 PM"
+          {
+            "time": "5:23 AM",
+            "height": "-0.1"
+          },
+          {
+            "time": "5:38 PM",
+            "height": "0.1"
+          }
         ]
       },
       "isMoodDay": false
     },
     {
       "date": "Mon, Sep 8",
-      "temp": 77,
-      "tempLow": 60,
+      "temp": 66,
+      "tempLow": 58,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 15,
+      "rainChance": 19,
       "rawDate": "2025-09-08",
       "tides": {
         "high": [
-          "12:15 PM"
+          {
+            "time": "12:15 PM",
+            "height": "10.6"
+          }
         ],
         "low": [
-          "6:05 AM",
-          "6:24 PM"
+          {
+            "time": "6:05 AM",
+            "height": "-0.5"
+          },
+          {
+            "time": "6:24 PM",
+            "height": "-0.5"
+          }
         ]
       },
       "isMoodDay": true
     },
     {
       "date": "Tue, Sep 9",
-      "temp": 75,
+      "temp": 68,
       "tempLow": 57,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 7,
+      "rainChance": 3,
       "rawDate": "2025-09-09",
       "tides": {
         "high": [
-          "12:35 AM",
-          "12:58 PM"
+          {
+            "time": "12:35 AM",
+            "height": "11.0"
+          },
+          {
+            "time": "12:58 PM",
+            "height": "11.0"
+          }
         ],
         "low": [
-          "6:48 AM",
-          "7:12 PM"
+          {
+            "time": "6:48 AM",
+            "height": "-0.7"
+          },
+          {
+            "time": "7:12 PM",
+            "height": "-0.8"
+          }
         ]
       },
       "isMoodDay": true

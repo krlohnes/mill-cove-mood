@@ -46,7 +46,29 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Handle app assets with cache-first strategy
+  // Use network-first for HTML files to avoid version conflicts
+  if (event.request.url.includes('.html') || event.request.url === self.location.origin + '/') {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response.status === 200) {
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseToCache);
+            });
+          }
+          return response;
+        })
+        .catch(() => {
+          // Network failed, try cached version as fallback
+          console.log('Network failed, serving cached HTML');
+          return caches.match(event.request);
+        })
+    );
+    return;
+  }
+
+  // Handle other assets with cache-first strategy
   event.respondWith(
     caches.match(event.request)
       .then((response) => {

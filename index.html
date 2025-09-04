@@ -653,9 +653,10 @@
             grid.innerHTML = '<div class="loading">Loading Mill Cove conditions...</div>';
             
             try {
-                // Add cache-busting timestamp and headers to ensure fresh data
+                // Add aggressive cache-busting with timestamp and random component
                 const timestamp = new Date().getTime();
-                const response = await fetch(`data/weather-data.json?t=${timestamp}`, {
+                const random = Math.random().toString(36).substring(7);
+                const response = await fetch(`data/weather-data.json?t=${timestamp}&r=${random}`, {
                     cache: 'no-store',
                     headers: {
                         'Cache-Control': 'no-cache, no-store, must-revalidate',

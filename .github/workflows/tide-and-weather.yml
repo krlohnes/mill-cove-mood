@@ -207,22 +207,28 @@ jobs:
                     const date = dateTime.split(' ')[0];
                     const time = this.formatTime(dateTime.split(' ')[1]);
                     const type = prediction.type;
+                    const height = parseFloat(prediction.v).toFixed(1); // Height in feet
 
                     if (!tidesByDate[date]) {
                         tidesByDate[date] = { high: [], low: [] };
                     }
 
+                    const tideInfo = {
+                        time: time,
+                        height: height
+                    };
+
                     if (type === 'H') {
-                        tidesByDate[date].high.push(time);
+                        tidesByDate[date].high.push(tideInfo);
                     } else {
-                        tidesByDate[date].low.push(time);
+                        tidesByDate[date].low.push(tideInfo);
                     }
                 });
 
                 // Log tide data for debugging
                 Object.keys(tidesByDate).forEach(date => {
                     const tides = tidesByDate[date];
-                    console.log(`${date}: High tides: ${tides.high.join(', ')}, Low tides: ${tides.low.join(', ')}`);
+                    console.log(`${date}: High tides: ${tides.high.map(t => `${t.time} (${t.height}ft)`).join(', ')}, Low tides: ${tides.low.map(t => `${t.time} (${t.height}ft)`).join(', ')}`);
                 });
 
                 return tidesByDate;
@@ -237,8 +243,8 @@ jobs:
             }
 
             checkMoodDay(weather, tides) {
-                const hasGoodTide = tides.high.some(time => {
-                    const [timeStr, ampm] = time.split(' ');
+                const hasGoodTide = tides.high.some(tide => {
+                    const [timeStr, ampm] = tide.time.split(' ');
                     const [hours] = timeStr.split(':');
                     const hour24 = ampm === 'PM' && hours !== '12' ? parseInt(hours) + 12 :
                                   ampm === 'AM' && hours === '12' ? 0 : parseInt(hours);

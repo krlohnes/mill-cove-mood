@@ -1,5 +1,5 @@
 // Mill Cove Mood - Service Worker
-const CACHE_NAME = 'mill-cove-mood-v2';
+const CACHE_NAME = 'mill-cove-mood-v3';
 const DATA_CACHE_NAME = 'mill-cove-mood-data-v1';
 const urlsToCache = [
   './',

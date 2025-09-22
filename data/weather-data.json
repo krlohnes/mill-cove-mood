@@ -1,47 +1,17 @@
 {
-  "lastUpdated": "2025-09-21T05:21:33.572Z",
+  "lastUpdated": "2025-09-22T05:22:47.182Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 68,
-      "tempLow": 45,
+      "temp": 72,
+      "tempLow": 48,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 0,
-      "rawDate": "2025-09-21",
-      "tides": {
-        "high": [
-          {
-            "time": "11:43 AM",
-            "height": "9.9"
-          }
-        ],
-        "low": [
-          {
-            "time": "5:30 AM",
-            "height": "0.3"
-          },
-          {
-            "time": "5:47 PM",
-            "height": "0.4"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Mon, Sep 22",
-      "temp": 76,
-      "tempLow": 50,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 0,
+      "rainChance": 2,
       "rawDate": "2025-09-22",
       "tides": {
         "high": [
@@ -69,13 +39,13 @@
     },
     {
       "date": "Tue, Sep 23",
-      "temp": 84,
-      "tempLow": 60,
-      "condition": "🌧️",
-      "description": "Rain Showers",
+      "temp": 83,
+      "tempLow": 57,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 39,
+      "rainChance": 49,
       "rawDate": "2025-09-23",
       "tides": {
         "high": [
@@ -103,13 +73,13 @@
     },
     {
       "date": "Wed, Sep 24",
-      "temp": 66,
+      "temp": 68,
       "tempLow": 61,
-      "condition": "🌧️",
-      "description": "Rain Showers",
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 40,
+      "rainChance": 56,
       "rawDate": "2025-09-24",
       "tides": {
         "high": [
@@ -137,13 +107,13 @@
     },
     {
       "date": "Thu, Sep 25",
-      "temp": 69,
-      "tempLow": 59,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 66,
+      "tempLow": 61,
+      "condition": "🌧️",
+      "description": "Rain",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 26,
+      "rainChance": 36,
       "rawDate": "2025-09-25",
       "tides": {
         "high": [
@@ -167,17 +137,17 @@
           }
         ]
       },
-      "isMoodDay": true
+      "isMoodDay": false
     },
     {
       "date": "Fri, Sep 26",
-      "temp": 73,
-      "tempLow": 63,
+      "temp": 77,
+      "tempLow": 66,
       "condition": "🌦️",
       "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 20,
+      "rainChance": 41,
       "rawDate": "2025-09-26",
       "tides": {
         "high": [
@@ -201,17 +171,17 @@
           }
         ]
       },
-      "isMoodDay": true
+      "isMoodDay": false
     },
     {
       "date": "Sat, Sep 27",
-      "temp": 70,
-      "tempLow": 63,
-      "condition": "🌫️",
-      "description": "Foggy",
+      "temp": 77,
+      "tempLow": 68,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 21,
+      "rainChance": 39,
       "rawDate": "2025-09-27",
       "tides": {
         "high": [
@@ -235,7 +205,41 @@
           }
         ]
       },
-      "isMoodDay": true
+      "isMoodDay": false
+    },
+    {
+      "date": "Sun, Sep 28",
+      "temp": 79,
+      "tempLow": 65,
+      "condition": "🌦️",
+      "description": "Drizzle",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 32,
+      "rawDate": "2025-09-28",
+      "tides": {
+        "high": [
+          {
+            "time": "4:10 AM",
+            "height": "8.2"
+          },
+          {
+            "time": "4:17 PM",
+            "height": "9.1"
+          }
+        ],
+        "low": [
+          {
+            "time": "10:06 AM",
+            "height": "2.3"
+          },
+          {
+            "time": "10:47 PM",
+            "height": "1.6"
+          }
+        ]
+      },
+      "isMoodDay": false
     }
   ]
 }

@@ -1,47 +1,17 @@
 {
-  "lastUpdated": "2025-10-14T05:21:55.174Z",
+  "lastUpdated": "2025-10-15T05:22:52.888Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 56,
-      "tempLow": 53,
-      "condition": "🌦️",
-      "description": "Drizzle",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 84,
-      "rawDate": "2025-10-14",
-      "tides": {
-        "high": [
-          {
-            "time": "5:53 AM",
-            "height": "8.9"
-          },
-          {
-            "time": "6:08 PM",
-            "height": "9.9"
-          }
-        ],
-        "low": [
-          {
-            "time": "11:48 AM",
-            "height": "1.5"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Wed, Oct 15",
-      "temp": 58,
-      "tempLow": 47,
+      "temp": 60,
+      "tempLow": 46,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 11,
+      "rainChance": 5,
       "rawDate": "2025-10-15",
       "tides": {
         "high": [
@@ -65,17 +35,17 @@
           }
         ]
       },
-      "isMoodDay": false
+      "isMoodDay": true
     },
     {
       "date": "Thu, Oct 16",
-      "temp": 55,
-      "tempLow": 43,
-      "condition": "☀️",
-      "description": "Clear",
+      "temp": 50,
+      "tempLow": 39,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 12,
+      "rainChance": 16,
       "rawDate": "2025-10-16",
       "tides": {
         "high": [
@@ -103,13 +73,13 @@
     },
     {
       "date": "Fri, Oct 17",
-      "temp": 57,
-      "tempLow": 44,
+      "temp": 58,
+      "tempLow": 46,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 11,
+      "rainChance": 17,
       "rawDate": "2025-10-17",
       "tides": {
         "high": [
@@ -143,7 +113,7 @@
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 5,
+      "rainChance": 2,
       "rawDate": "2025-10-18",
       "tides": {
         "high": [
@@ -171,13 +141,13 @@
     },
     {
       "date": "Sun, Oct 19",
-      "temp": 71,
-      "tempLow": 50,
+      "temp": 64,
+      "tempLow": 48,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 40,
+      "rainChance": 18,
       "rawDate": "2025-10-19",
       "tides": {
         "high": [
@@ -205,8 +175,8 @@
     },
     {
       "date": "Mon, Oct 20",
-      "temp": 66,
-      "tempLow": 55,
+      "temp": 61,
+      "tempLow": 50,
       "condition": "🌦️",
       "description": "Drizzle",
       "humidity": 50,
@@ -232,6 +202,36 @@
           {
             "time": "5:26 PM",
             "height": "0.4"
+          }
+        ]
+      },
+      "isMoodDay": false
+    },
+    {
+      "date": "Tue, Oct 21",
+      "temp": 53,
+      "tempLow": 47,
+      "condition": "🌦️",
+      "description": "Drizzle",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 41,
+      "rawDate": "2025-10-21",
+      "tides": {
+        "high": [
+          {
+            "time": "11:49 AM",
+            "height": "10.1"
+          }
+        ],
+        "low": [
+          {
+            "time": "5:39 AM",
+            "height": "0.9"
+          },
+          {
+            "time": "6:05 PM",
+            "height": "0.3"
           }
         ]
       },

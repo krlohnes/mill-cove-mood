@@ -1,51 +1,17 @@
 {
-  "lastUpdated": "2025-11-03T05:25:05.926Z",
+  "lastUpdated": "2025-11-04T05:24:12.935Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 55,
-      "tempLow": 34,
-      "condition": "🌧️",
-      "description": "Rain",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 67,
-      "rawDate": "2025-11-03",
-      "tides": {
-        "high": [
-          {
-            "time": "8:39 AM",
-            "height": "10.7"
-          },
-          {
-            "time": "9:07 PM",
-            "height": "10.4"
-          }
-        ],
-        "low": [
-          {
-            "time": "2:27 AM",
-            "height": "0.1"
-          },
-          {
-            "time": "2:57 PM",
-            "height": "-0.4"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Tue, Nov 4",
-      "temp": 50,
+      "temp": 51,
       "tempLow": 40,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 17,
+      "rainChance": 16,
       "rawDate": "2025-11-04",
       "tides": {
         "high": [
@@ -73,13 +39,13 @@
     },
     {
       "date": "Wed, Nov 5",
-      "temp": 57,
-      "tempLow": 42,
+      "temp": 58,
+      "tempLow": 37,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 42,
+      "rainChance": 52,
       "rawDate": "2025-11-05",
       "tides": {
         "high": [
@@ -107,13 +73,13 @@
     },
     {
       "date": "Thu, Nov 6",
-      "temp": 57,
-      "tempLow": 41,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 55,
+      "tempLow": 39,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 42,
+      "rainChance": 52,
       "rawDate": "2025-11-06",
       "tides": {
         "high": [
@@ -141,13 +107,13 @@
     },
     {
       "date": "Fri, Nov 7",
-      "temp": 59,
-      "tempLow": 38,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 55,
+      "tempLow": 35,
+      "condition": "🌧️",
+      "description": "Rain",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 26,
+      "rainChance": 23,
       "rawDate": "2025-11-07",
       "tides": {
         "high": [
@@ -171,13 +137,13 @@
     },
     {
       "date": "Sat, Nov 8",
-      "temp": 60,
-      "tempLow": 40,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 57,
+      "tempLow": 45,
+      "condition": "🌧️",
+      "description": "Rain Showers",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 56,
+      "rainChance": 57,
       "rawDate": "2025-11-08",
       "tides": {
         "high": [
@@ -205,13 +171,13 @@
     },
     {
       "date": "Sun, Nov 9",
-      "temp": 49,
-      "tempLow": 36,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 52,
+      "tempLow": 42,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 32,
+      "rainChance": 39,
       "rawDate": "2025-11-09",
       "tides": {
         "high": [
@@ -232,6 +198,40 @@
           {
             "time": "8:11 PM",
             "height": "-0.8"
+          }
+        ]
+      },
+      "isMoodDay": false
+    },
+    {
+      "date": "Mon, Nov 10",
+      "temp": 50,
+      "tempLow": 32,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 39,
+      "rawDate": "2025-11-10",
+      "tides": {
+        "high": [
+          {
+            "time": "2:28 AM",
+            "height": "9.6"
+          },
+          {
+            "time": "2:39 PM",
+            "height": "10.8"
+          }
+        ],
+        "low": [
+          {
+            "time": "8:24 AM",
+            "height": "0.7"
+          },
+          {
+            "time": "9:10 PM",
+            "height": "-0.3"
           }
         ]
       },

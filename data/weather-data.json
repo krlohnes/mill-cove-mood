@@ -1,51 +1,17 @@
 {
-  "lastUpdated": "2025-11-26T05:25:26.340Z",
+  "lastUpdated": "2025-11-27T05:26:10.707Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 60,
-      "tempLow": 49,
-      "condition": "🌦️",
-      "description": "Drizzle",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 78,
-      "rawDate": "2025-11-26",
-      "tides": {
-        "high": [
-          {
-            "time": "3:01 AM",
-            "height": "8.3"
-          },
-          {
-            "time": "3:03 PM",
-            "height": "9.3"
-          }
-        ],
-        "low": [
-          {
-            "time": "8:55 AM",
-            "height": "2.0"
-          },
-          {
-            "time": "9:32 PM",
-            "height": "0.9"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Thu, Nov 27",
-      "temp": 54,
-      "tempLow": 36,
+      "temp": 55,
+      "tempLow": 35,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 7,
+      "rainChance": 14,
       "rawDate": "2025-11-27",
       "tides": {
         "high": [
@@ -73,13 +39,13 @@
     },
     {
       "date": "Fri, Nov 28",
-      "temp": 41,
+      "temp": 40,
       "tempLow": 32,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 2,
+      "rainChance": 1,
       "rawDate": "2025-11-28",
       "tides": {
         "high": [
@@ -108,12 +74,12 @@
     {
       "date": "Sat, Nov 29",
       "temp": 41,
-      "tempLow": 32,
+      "tempLow": 33,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 1,
+      "rainChance": 0,
       "rawDate": "2025-11-29",
       "tides": {
         "high": [
@@ -137,13 +103,13 @@
     },
     {
       "date": "Sun, Nov 30",
-      "temp": 50,
-      "tempLow": 32,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 48,
+      "tempLow": 33,
+      "condition": "🌧️",
+      "description": "Rain",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 45,
+      "rainChance": 69,
       "rawDate": "2025-11-30",
       "tides": {
         "high": [
@@ -171,13 +137,13 @@
     },
     {
       "date": "Mon, Dec 1",
-      "temp": 48,
-      "tempLow": 39,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 42,
+      "tempLow": 34,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 45,
+      "rainChance": 69,
       "rawDate": "2025-12-01",
       "tides": {
         "high": [
@@ -205,13 +171,13 @@
     },
     {
       "date": "Tue, Dec 2",
-      "temp": 38,
-      "tempLow": 32,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 37,
+      "tempLow": 34,
+      "condition": "❄️",
+      "description": "Snow",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 46,
+      "rainChance": 34,
       "rawDate": "2025-12-02",
       "tides": {
         "high": [
@@ -232,6 +198,40 @@
           {
             "time": "2:33 PM",
             "height": "-0.6"
+          }
+        ]
+      },
+      "isMoodDay": false
+    },
+    {
+      "date": "Wed, Dec 3",
+      "temp": 37,
+      "tempLow": 28,
+      "condition": "❄️",
+      "description": "Snow",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 34,
+      "rawDate": "2025-12-03",
+      "tides": {
+        "high": [
+          {
+            "time": "8:58 AM",
+            "height": "11.5"
+          },
+          {
+            "time": "9:37 PM",
+            "height": "10.0"
+          }
+        ],
+        "low": [
+          {
+            "time": "2:46 AM",
+            "height": "-0.0"
+          },
+          {
+            "time": "3:28 PM",
+            "height": "-1.2"
           }
         ]
       },

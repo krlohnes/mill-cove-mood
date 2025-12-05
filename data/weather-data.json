@@ -1,51 +1,17 @@
 {
-  "lastUpdated": "2025-12-04T05:25:15.068Z",
+  "lastUpdated": "2025-12-05T05:25:42.279Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 37,
-      "tempLow": 16,
+      "temp": 26,
+      "tempLow": 12,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 8,
-      "rawDate": "2025-12-04",
-      "tides": {
-        "high": [
-          {
-            "time": "9:49 AM",
-            "height": "11.9"
-          },
-          {
-            "time": "10:30 PM",
-            "height": "10.1"
-          }
-        ],
-        "low": [
-          {
-            "time": "3:38 AM",
-            "height": "-0.2"
-          },
-          {
-            "time": "4:21 PM",
-            "height": "-1.6"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Fri, Dec 5",
-      "temp": 27,
-      "tempLow": 10,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 5,
+      "rainChance": 0,
       "rawDate": "2025-12-05",
       "tides": {
         "high": [
@@ -73,13 +39,13 @@
     },
     {
       "date": "Sat, Dec 6",
-      "temp": 38,
-      "tempLow": 27,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 37,
+      "tempLow": 23,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 27,
+      "rainChance": 25,
       "rawDate": "2025-12-06",
       "tides": {
         "high": [
@@ -103,13 +69,13 @@
     },
     {
       "date": "Sun, Dec 7",
-      "temp": 38,
-      "tempLow": 31,
+      "temp": 37,
+      "tempLow": 32,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 10,
+      "rainChance": 26,
       "rawDate": "2025-12-07",
       "tides": {
         "high": [
@@ -137,13 +103,13 @@
     },
     {
       "date": "Mon, Dec 8",
-      "temp": 30,
-      "tempLow": 21,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 34,
+      "tempLow": 15,
+      "condition": "❄️",
+      "description": "Snow",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 13,
+      "rainChance": 32,
       "rawDate": "2025-12-08",
       "tides": {
         "high": [
@@ -171,13 +137,13 @@
     },
     {
       "date": "Tue, Dec 9",
-      "temp": 39,
-      "tempLow": 20,
+      "temp": 27,
+      "tempLow": 15,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 31,
+      "rainChance": 35,
       "rawDate": "2025-12-09",
       "tides": {
         "high": [
@@ -205,13 +171,13 @@
     },
     {
       "date": "Wed, Dec 10",
-      "temp": 40,
-      "tempLow": 32,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 53,
+      "tempLow": 28,
+      "condition": "🌧️",
+      "description": "Rain",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 31,
+      "rainChance": 42,
       "rawDate": "2025-12-10",
       "tides": {
         "high": [
@@ -232,6 +198,40 @@
           {
             "time": "9:44 PM",
             "height": "0.2"
+          }
+        ]
+      },
+      "isMoodDay": false
+    },
+    {
+      "date": "Thu, Dec 11",
+      "temp": 53,
+      "tempLow": 33,
+      "condition": "🌧️",
+      "description": "Rain",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 42,
+      "rawDate": "2025-12-11",
+      "tides": {
+        "high": [
+          {
+            "time": "4:06 AM",
+            "height": "9.2"
+          },
+          {
+            "time": "4:22 PM",
+            "height": "9.4"
+          }
+        ],
+        "low": [
+          {
+            "time": "10:05 AM",
+            "height": "1.2"
+          },
+          {
+            "time": "10:40 PM",
+            "height": "0.6"
           }
         ]
       },

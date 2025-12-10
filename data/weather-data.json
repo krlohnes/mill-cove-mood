@@ -1,51 +1,17 @@
 {
-  "lastUpdated": "2025-12-09T05:26:09.762Z",
+  "lastUpdated": "2025-12-10T05:27:03.133Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 29,
-      "tempLow": 10,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 46,
+      "tempLow": 26,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 16,
-      "rawDate": "2025-12-09",
-      "tides": {
-        "high": [
-          {
-            "time": "2:11 AM",
-            "height": "9.6"
-          },
-          {
-            "time": "2:22 PM",
-            "height": "10.7"
-          }
-        ],
-        "low": [
-          {
-            "time": "8:06 AM",
-            "height": "0.5"
-          },
-          {
-            "time": "8:48 PM",
-            "height": "-0.4"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Wed, Dec 10",
-      "temp": 48,
-      "tempLow": 27,
-      "condition": "🌧️",
-      "description": "Rain",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 70,
+      "rainChance": 31,
       "rawDate": "2025-12-10",
       "tides": {
         "high": [
@@ -74,12 +40,12 @@
     {
       "date": "Thu, Dec 11",
       "temp": 40,
-      "tempLow": 31,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "tempLow": 25,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 34,
+      "rainChance": 9,
       "rawDate": "2025-12-11",
       "tides": {
         "high": [
@@ -107,13 +73,13 @@
     },
     {
       "date": "Fri, Dec 12",
-      "temp": 33,
-      "tempLow": 27,
+      "temp": 32,
+      "tempLow": 26,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 7,
+      "rainChance": 3,
       "rawDate": "2025-12-12",
       "tides": {
         "high": [
@@ -141,13 +107,13 @@
     },
     {
       "date": "Sat, Dec 13",
-      "temp": 39,
-      "tempLow": 29,
+      "temp": 38,
+      "tempLow": 27,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 18,
+      "rainChance": 17,
       "rawDate": "2025-12-13",
       "tides": {
         "high": [
@@ -171,13 +137,13 @@
     },
     {
       "date": "Sun, Dec 14",
-      "temp": 31,
-      "tempLow": 23,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 32,
+      "tempLow": 27,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 20,
+      "rainChance": 27,
       "rawDate": "2025-12-14",
       "tides": {
         "high": [
@@ -205,13 +171,13 @@
     },
     {
       "date": "Mon, Dec 15",
-      "temp": 28,
-      "tempLow": 20,
+      "temp": 31,
+      "tempLow": 25,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 10,
+      "rainChance": 16,
       "rawDate": "2025-12-15",
       "tides": {
         "high": [
@@ -232,6 +198,40 @@
           {
             "time": "2:05 PM",
             "height": "1.1"
+          }
+        ]
+      },
+      "isMoodDay": false
+    },
+    {
+      "date": "Tue, Dec 16",
+      "temp": 30,
+      "tempLow": 23,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 16,
+      "rawDate": "2025-12-16",
+      "tides": {
+        "high": [
+          {
+            "time": "8:30 AM",
+            "height": "9.4"
+          },
+          {
+            "time": "9:07 PM",
+            "height": "8.3"
+          }
+        ],
+        "low": [
+          {
+            "time": "2:11 AM",
+            "height": "1.7"
+          },
+          {
+            "time": "2:55 PM",
+            "height": "0.9"
           }
         ]
       },

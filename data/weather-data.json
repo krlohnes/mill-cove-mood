@@ -1,42 +1,12 @@
 {
-  "lastUpdated": "2026-01-19T05:35:36.171Z",
+  "lastUpdated": "2026-01-20T05:34:19.268Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 33,
-      "tempLow": 25,
-      "condition": "❄️",
-      "description": "Snow",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 89,
-      "rawDate": "2026-01-19",
-      "tides": {
-        "high": [
-          {
-            "time": "11:26 AM",
-            "height": "10.1"
-          }
-        ],
-        "low": [
-          {
-            "time": "5:13 AM",
-            "height": "0.9"
-          },
-          {
-            "time": "5:48 PM",
-            "height": "-0.2"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Tue, Jan 20",
-      "temp": 24,
-      "tempLow": 15,
+      "temp": 23,
+      "tempLow": 13,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
@@ -70,12 +40,12 @@
     {
       "date": "Wed, Jan 21",
       "temp": 36,
-      "tempLow": 16,
+      "tempLow": 9,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 9,
+      "rainChance": 11,
       "rawDate": "2026-01-21",
       "tides": {
         "high": [
@@ -104,12 +74,12 @@
     {
       "date": "Thu, Jan 22",
       "temp": 41,
-      "tempLow": 30,
-      "condition": "❄️",
-      "description": "Snow",
+      "tempLow": 32,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 17,
+      "rainChance": 16,
       "rawDate": "2026-01-22",
       "tides": {
         "high": [
@@ -137,13 +107,13 @@
     },
     {
       "date": "Fri, Jan 23",
-      "temp": 32,
-      "tempLow": 17,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 34,
+      "tempLow": 15,
+      "condition": "❄️",
+      "description": "Snow",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 8,
+      "rainChance": 6,
       "rawDate": "2026-01-23",
       "tides": {
         "high": [
@@ -171,13 +141,13 @@
     },
     {
       "date": "Sat, Jan 24",
-      "temp": 15,
-      "tempLow": 3,
+      "temp": 16,
+      "tempLow": 5,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 10,
+      "rainChance": 14,
       "rawDate": "2026-01-24",
       "tides": {
         "high": [
@@ -206,12 +176,12 @@
     {
       "date": "Sun, Jan 25",
       "temp": 16,
-      "tempLow": 8,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "tempLow": 13,
+      "condition": "❄️",
+      "description": "Snow",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 15,
+      "rainChance": 34,
       "rawDate": "2026-01-25",
       "tides": {
         "high": [
@@ -232,6 +202,40 @@
           {
             "time": "10:03 PM",
             "height": "0.3"
+          }
+        ]
+      },
+      "isMoodDay": false
+    },
+    {
+      "date": "Mon, Jan 26",
+      "temp": 24,
+      "tempLow": 13,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 33,
+      "rawDate": "2026-01-26",
+      "tides": {
+        "high": [
+          {
+            "time": "4:16 AM",
+            "height": "9.9"
+          },
+          {
+            "time": "4:49 PM",
+            "height": "8.8"
+          }
+        ],
+        "low": [
+          {
+            "time": "10:43 AM",
+            "height": "0.3"
+          },
+          {
+            "time": "10:59 PM",
+            "height": "0.6"
           }
         ]
       },

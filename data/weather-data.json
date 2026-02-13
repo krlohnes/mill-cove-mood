@@ -1,51 +1,17 @@
 {
-  "lastUpdated": "2026-02-12T06:06:36.047Z",
+  "lastUpdated": "2026-02-13T06:02:56.864Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 32,
-      "tempLow": 19,
+      "temp": 33,
+      "tempLow": 13,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 2,
-      "rawDate": "2026-02-12",
-      "tides": {
-        "high": [
-          {
-            "time": "7:07 AM",
-            "height": "8.7"
-          },
-          {
-            "time": "7:55 PM",
-            "height": "7.5"
-          }
-        ],
-        "low": [
-          {
-            "time": "12:46 AM",
-            "height": "2.2"
-          },
-          {
-            "time": "1:39 PM",
-            "height": "1.4"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Fri, Feb 13",
-      "temp": 32,
-      "tempLow": 11,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 1,
+      "rainChance": 0,
       "rawDate": "2026-02-13",
       "tides": {
         "high": [
@@ -73,13 +39,13 @@
     },
     {
       "date": "Sat, Feb 14",
-      "temp": 33,
-      "tempLow": 16,
-      "condition": "❄️",
-      "description": "Snow",
+      "temp": 35,
+      "tempLow": 13,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 10,
+      "rainChance": 3,
       "rawDate": "2026-02-14",
       "tides": {
         "high": [
@@ -107,13 +73,13 @@
     },
     {
       "date": "Sun, Feb 15",
-      "temp": 33,
-      "tempLow": 22,
-      "condition": "🌫️",
-      "description": "Foggy",
+      "temp": 30,
+      "tempLow": 19,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 14,
+      "rainChance": 3,
       "rawDate": "2026-02-15",
       "tides": {
         "high": [
@@ -142,12 +108,12 @@
     {
       "date": "Mon, Feb 16",
       "temp": 33,
-      "tempLow": 22,
+      "tempLow": 21,
       "condition": "🌫️",
       "description": "Foggy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 21,
+      "rainChance": 15,
       "rawDate": "2026-02-16",
       "tides": {
         "high": [
@@ -175,13 +141,13 @@
     },
     {
       "date": "Tue, Feb 17",
-      "temp": 35,
+      "temp": 39,
       "tempLow": 26,
       "condition": "🌫️",
       "description": "Foggy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 13,
+      "rainChance": 15,
       "rawDate": "2026-02-17",
       "tides": {
         "high": [
@@ -209,13 +175,13 @@
     },
     {
       "date": "Wed, Feb 18",
-      "temp": 40,
-      "tempLow": 33,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 36,
+      "tempLow": 31,
+      "condition": "❄️",
+      "description": "Snow",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 45,
+      "rainChance": 46,
       "rawDate": "2026-02-18",
       "tides": {
         "high": [
@@ -231,6 +197,40 @@
           },
           {
             "time": "5:56 PM",
+            "height": "-0.6"
+          }
+        ]
+      },
+      "isMoodDay": false
+    },
+    {
+      "date": "Thu, Feb 19",
+      "temp": 34,
+      "tempLow": 30,
+      "condition": "❄️",
+      "description": "Snow",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 46,
+      "rawDate": "2026-02-19",
+      "tides": {
+        "high": [
+          {
+            "time": "12:07 AM",
+            "height": "9.8"
+          },
+          {
+            "time": "12:22 PM",
+            "height": "10.4"
+          }
+        ],
+        "low": [
+          {
+            "time": "6:12 AM",
+            "height": "-0.3"
+          },
+          {
+            "time": "6:36 PM",
             "height": "-0.6"
           }
         ]

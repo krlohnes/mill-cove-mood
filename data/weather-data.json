@@ -1,51 +1,17 @@
 {
-  "lastUpdated": "2026-02-14T05:50:22.063Z",
+  "lastUpdated": "2026-02-15T05:59:09.616Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 36,
-      "tempLow": 15,
+      "temp": 30,
+      "tempLow": 17,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
       "rainChance": 1,
-      "rawDate": "2026-02-14",
-      "tides": {
-        "high": [
-          {
-            "time": "8:54 AM",
-            "height": "9.3"
-          },
-          {
-            "time": "9:33 PM",
-            "height": "8.2"
-          }
-        ],
-        "low": [
-          {
-            "time": "2:35 AM",
-            "height": "1.7"
-          },
-          {
-            "time": "3:20 PM",
-            "height": "0.7"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Sun, Feb 15",
-      "temp": 29,
-      "tempLow": 20,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 7,
       "rawDate": "2026-02-15",
       "tides": {
         "high": [
@@ -73,13 +39,13 @@
     },
     {
       "date": "Mon, Feb 16",
-      "temp": 34,
-      "tempLow": 25,
+      "temp": 35,
+      "tempLow": 17,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 13,
+      "rainChance": 10,
       "rawDate": "2026-02-16",
       "tides": {
         "high": [
@@ -107,13 +73,13 @@
     },
     {
       "date": "Tue, Feb 17",
-      "temp": 35,
+      "temp": 34,
       "tempLow": 23,
-      "condition": "🌫️",
-      "description": "Foggy",
+      "condition": "❄️",
+      "description": "Snow",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 5,
+      "rainChance": 6,
       "rawDate": "2026-02-17",
       "tides": {
         "high": [
@@ -141,13 +107,13 @@
     },
     {
       "date": "Wed, Feb 18",
-      "temp": 35,
-      "tempLow": 30,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 34,
+      "tempLow": 27,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 58,
+      "rainChance": 75,
       "rawDate": "2026-02-18",
       "tides": {
         "high": [
@@ -171,13 +137,13 @@
     },
     {
       "date": "Thu, Feb 19",
-      "temp": 36,
-      "tempLow": 31,
-      "condition": "🌫️",
-      "description": "Foggy",
+      "temp": 35,
+      "tempLow": 29,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 58,
+      "rainChance": 75,
       "rawDate": "2026-02-19",
       "tides": {
         "high": [
@@ -206,12 +172,12 @@
     {
       "date": "Fri, Feb 20",
       "temp": 37,
-      "tempLow": 32,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "tempLow": 31,
+      "condition": "❄️",
+      "description": "Snow",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 40,
+      "rainChance": 46,
       "rawDate": "2026-02-20",
       "tides": {
         "high": [
@@ -232,6 +198,40 @@
           {
             "time": "7:16 PM",
             "height": "-0.6"
+          }
+        ]
+      },
+      "isMoodDay": false
+    },
+    {
+      "date": "Sat, Feb 21",
+      "temp": 34,
+      "tempLow": 31,
+      "condition": "❄️",
+      "description": "Snow",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 43,
+      "rawDate": "2026-02-21",
+      "tides": {
+        "high": [
+          {
+            "time": "1:26 AM",
+            "height": "10.4"
+          },
+          {
+            "time": "1:49 PM",
+            "height": "10.0"
+          }
+        ],
+        "low": [
+          {
+            "time": "7:41 AM",
+            "height": "-0.6"
+          },
+          {
+            "time": "7:59 PM",
+            "height": "-0.3"
           }
         ]
       },

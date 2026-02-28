@@ -1,51 +1,17 @@
 {
-  "lastUpdated": "2026-02-27T05:56:11.988Z",
+  "lastUpdated": "2026-02-28T05:36:30.094Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 36,
-      "tempLow": 15,
+      "temp": 42,
+      "tempLow": 24,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 1,
-      "rawDate": "2026-02-27",
-      "tides": {
-        "high": [
-          {
-            "time": "7:09 AM",
-            "height": "9.9"
-          },
-          {
-            "time": "8:01 PM",
-            "height": "8.5"
-          }
-        ],
-        "low": [
-          {
-            "time": "12:48 AM",
-            "height": "1.1"
-          },
-          {
-            "time": "1:43 PM",
-            "height": "0.2"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Sat, Feb 28",
-      "temp": 44,
-      "tempLow": 25,
-      "condition": "🌫️",
-      "description": "Foggy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 2,
+      "rainChance": 4,
       "rawDate": "2026-02-28",
       "tides": {
         "high": [
@@ -73,13 +39,13 @@
     },
     {
       "date": "Sun, Mar 1",
-      "temp": 33,
-      "tempLow": 21,
-      "condition": "⛅",
-      "description": "Cloudy",
+      "temp": 32,
+      "tempLow": 20,
+      "condition": "❄️",
+      "description": "Snow",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 34,
+      "rainChance": 45,
       "rawDate": "2026-03-01",
       "tides": {
         "high": [
@@ -107,13 +73,13 @@
     },
     {
       "date": "Mon, Mar 2",
-      "temp": 25,
-      "tempLow": 13,
+      "temp": 26,
+      "tempLow": 14,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 12,
+      "rainChance": 16,
       "rawDate": "2026-03-02",
       "tides": {
         "high": [
@@ -141,13 +107,13 @@
     },
     {
       "date": "Tue, Mar 3",
-      "temp": 35,
-      "tempLow": 19,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 39,
+      "tempLow": 20,
+      "condition": "❄️",
+      "description": "Snow",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 43,
+      "rainChance": 79,
       "rawDate": "2026-03-03",
       "tides": {
         "high": [
@@ -175,13 +141,13 @@
     },
     {
       "date": "Wed, Mar 4",
-      "temp": 43,
-      "tempLow": 32,
+      "temp": 42,
+      "tempLow": 34,
       "condition": "🌦️",
       "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 53,
+      "rainChance": 79,
       "rawDate": "2026-03-04",
       "tides": {
         "high": [
@@ -205,13 +171,13 @@
     },
     {
       "date": "Thu, Mar 5",
-      "temp": 39,
-      "tempLow": 33,
-      "condition": "❄️",
-      "description": "Snow",
+      "temp": 55,
+      "tempLow": 35,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 36,
+      "rainChance": 39,
       "rawDate": "2026-03-05",
       "tides": {
         "high": [
@@ -232,6 +198,40 @@
           {
             "time": "6:37 PM",
             "height": "-0.2"
+          }
+        ]
+      },
+      "isMoodDay": false
+    },
+    {
+      "date": "Fri, Mar 6",
+      "temp": 39,
+      "tempLow": 34,
+      "condition": "🌫️",
+      "description": "Foggy",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 39,
+      "rawDate": "2026-03-06",
+      "tides": {
+        "high": [
+          {
+            "time": "12:49 AM",
+            "height": "10.1"
+          },
+          {
+            "time": "1:12 PM",
+            "height": "9.8"
+          }
+        ],
+        "low": [
+          {
+            "time": "6:58 AM",
+            "height": "-0.3"
+          },
+          {
+            "time": "7:16 PM",
+            "height": "0.2"
           }
         ]
       },

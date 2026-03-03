@@ -1,51 +1,17 @@
 {
-  "lastUpdated": "2026-03-02T05:56:45.459Z",
+  "lastUpdated": "2026-03-03T05:54:00.161Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 26,
-      "tempLow": 15,
-      "condition": "☀️",
-      "description": "Clear",
+      "temp": 32,
+      "tempLow": 10,
+      "condition": "❄️",
+      "description": "Snow",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 0,
-      "rawDate": "2026-03-02",
-      "tides": {
-        "high": [
-          {
-            "time": "10:12 AM",
-            "height": "10.5"
-          },
-          {
-            "time": "10:45 PM",
-            "height": "9.8"
-          }
-        ],
-        "low": [
-          {
-            "time": "3:53 AM",
-            "height": "0.1"
-          },
-          {
-            "time": "4:30 PM",
-            "height": "-0.6"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Tue, Mar 3",
-      "temp": 35,
-      "tempLow": 16,
-      "condition": "🌦️",
-      "description": "Drizzle",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 91,
+      "rainChance": 97,
       "rawDate": "2026-03-03",
       "tides": {
         "high": [
@@ -73,13 +39,13 @@
     },
     {
       "date": "Wed, Mar 4",
-      "temp": 37,
-      "tempLow": 32,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 42,
+      "tempLow": 24,
+      "condition": "🌧️",
+      "description": "Rain",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 91,
+      "rainChance": 77,
       "rawDate": "2026-03-04",
       "tides": {
         "high": [
@@ -104,12 +70,12 @@
     {
       "date": "Thu, Mar 5",
       "temp": 36,
-      "tempLow": 32,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "tempLow": 33,
+      "condition": "🌧️",
+      "description": "Rain",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 47,
+      "rainChance": 49,
       "rawDate": "2026-03-05",
       "tides": {
         "high": [
@@ -138,12 +104,12 @@
     {
       "date": "Fri, Mar 6",
       "temp": 36,
-      "tempLow": 34,
-      "condition": "🌧️",
-      "description": "Rain",
+      "tempLow": 33,
+      "condition": "❄️",
+      "description": "Snow",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 58,
+      "rainChance": 79,
       "rawDate": "2026-03-06",
       "tides": {
         "high": [
@@ -171,13 +137,13 @@
     },
     {
       "date": "Sat, Mar 7",
-      "temp": 44,
+      "temp": 48,
       "tempLow": 34,
-      "condition": "🌫️",
-      "description": "Foggy",
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 35,
+      "rainChance": 39,
       "rawDate": "2026-03-07",
       "tides": {
         "high": [
@@ -205,13 +171,13 @@
     },
     {
       "date": "Sun, Mar 8",
-      "temp": 67,
-      "tempLow": 45,
+      "temp": 52,
+      "tempLow": 44,
       "condition": "🌦️",
       "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 35,
+      "rainChance": 39,
       "rawDate": "2026-03-08",
       "tides": {
         "high": [
@@ -236,6 +202,40 @@
         ]
       },
       "isMoodDay": false
+    },
+    {
+      "date": "Mon, Mar 9",
+      "temp": 61,
+      "tempLow": 43,
+      "condition": "🌫️",
+      "description": "Foggy",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 12,
+      "rawDate": "2026-03-09",
+      "tides": {
+        "high": [
+          {
+            "time": "3:49 AM",
+            "height": "9.4"
+          },
+          {
+            "time": "4:24 PM",
+            "height": "8.3"
+          }
+        ],
+        "low": [
+          {
+            "time": "10:12 AM",
+            "height": "0.8"
+          },
+          {
+            "time": "10:23 PM",
+            "height": "1.6"
+          }
+        ]
+      },
+      "isMoodDay": true
     }
   ]
 }

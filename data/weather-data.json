@@ -1,51 +1,17 @@
 {
-  "lastUpdated": "2026-04-12T06:24:03.450Z",
+  "lastUpdated": "2026-04-13T07:16:02.167Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 55,
-      "tempLow": 34,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 22,
-      "rawDate": "2026-04-12",
-      "tides": {
-        "high": [
-          {
-            "time": "7:38 AM",
-            "height": "8.9"
-          },
-          {
-            "time": "8:19 PM",
-            "height": "8.4"
-          }
-        ],
-        "low": [
-          {
-            "time": "1:24 AM",
-            "height": "2.1"
-          },
-          {
-            "time": "2:02 PM",
-            "height": "1.4"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Mon, Apr 13",
-      "temp": 63,
+      "temp": 71,
       "tempLow": 43,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 37,
+      "rainChance": 23,
       "rawDate": "2026-04-13",
       "tides": {
         "high": [
@@ -73,13 +39,13 @@
     },
     {
       "date": "Tue, Apr 14",
-      "temp": 80,
-      "tempLow": 56,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 73,
+      "tempLow": 57,
+      "condition": "🌧️",
+      "description": "Rain Showers",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 20,
+      "rainChance": 30,
       "rawDate": "2026-04-14",
       "tides": {
         "high": [
@@ -107,13 +73,13 @@
     },
     {
       "date": "Wed, Apr 15",
-      "temp": 84,
-      "tempLow": 61,
-      "condition": "🌧️",
-      "description": "Rain Showers",
+      "temp": 79,
+      "tempLow": 59,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 29,
+      "rainChance": 30,
       "rawDate": "2026-04-15",
       "tides": {
         "high": [
@@ -141,13 +107,13 @@
     },
     {
       "date": "Thu, Apr 16",
-      "temp": 82,
-      "tempLow": 62,
-      "condition": "🌧️",
-      "description": "Rain Showers",
+      "temp": 64,
+      "tempLow": 51,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 29,
+      "rainChance": 30,
       "rawDate": "2026-04-16",
       "tides": {
         "high": [
@@ -176,7 +142,7 @@
     {
       "date": "Fri, Apr 17",
       "temp": 72,
-      "tempLow": 56,
+      "tempLow": 58,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
@@ -205,13 +171,13 @@
     },
     {
       "date": "Sat, Apr 18",
-      "temp": 72,
-      "tempLow": 49,
-      "condition": "🌫️",
-      "description": "Foggy",
+      "temp": 70,
+      "tempLow": 53,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 20,
+      "rainChance": 16,
       "rawDate": "2026-04-18",
       "tides": {
         "high": [
@@ -236,6 +202,40 @@
         ]
       },
       "isMoodDay": true
+    },
+    {
+      "date": "Sun, Apr 19",
+      "temp": 74,
+      "tempLow": 48,
+      "condition": "🌦️",
+      "description": "Drizzle",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 31,
+      "rawDate": "2026-04-19",
+      "tides": {
+        "high": [
+          {
+            "time": "12:47 AM",
+            "height": "11.6"
+          },
+          {
+            "time": "1:25 PM",
+            "height": "10.3"
+          }
+        ],
+        "low": [
+          {
+            "time": "7:14 AM",
+            "height": "-1.5"
+          },
+          {
+            "time": "7:26 PM",
+            "height": "-0.3"
+          }
+        ]
+      },
+      "isMoodDay": false
     }
   ]
 }

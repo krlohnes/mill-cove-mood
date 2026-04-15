@@ -1,51 +1,17 @@
 {
-  "lastUpdated": "2026-04-14T06:53:43.761Z",
+  "lastUpdated": "2026-04-15T06:56:00.560Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 76,
-      "tempLow": 54,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 70,
+      "tempLow": 49,
+      "condition": "🌫️",
+      "description": "Foggy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 34,
-      "rawDate": "2026-04-14",
-      "tides": {
-        "high": [
-          {
-            "time": "9:26 AM",
-            "height": "9.5"
-          },
-          {
-            "time": "9:52 PM",
-            "height": "9.6"
-          }
-        ],
-        "low": [
-          {
-            "time": "3:13 AM",
-            "height": "1.1"
-          },
-          {
-            "time": "3:40 PM",
-            "height": "0.6"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Wed, Apr 15",
-      "temp": 71,
-      "tempLow": 52,
-      "condition": "🌧️",
-      "description": "Rain Showers",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 42,
+      "rainChance": 19,
       "rawDate": "2026-04-15",
       "tides": {
         "high": [
@@ -73,13 +39,13 @@
     },
     {
       "date": "Thu, Apr 16",
-      "temp": 74,
-      "tempLow": 54,
+      "temp": 72,
+      "tempLow": 45,
       "condition": "🌧️",
-      "description": "Rain Showers",
+      "description": "Rain",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 41,
+      "rainChance": 35,
       "rawDate": "2026-04-16",
       "tides": {
         "high": [
@@ -107,13 +73,13 @@
     },
     {
       "date": "Fri, Apr 17",
-      "temp": 69,
-      "tempLow": 47,
+      "temp": 74,
+      "tempLow": 49,
       "condition": "🌦️",
       "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 45,
+      "rainChance": 47,
       "rawDate": "2026-04-17",
       "tides": {
         "high": [
@@ -137,13 +103,13 @@
     },
     {
       "date": "Sat, Apr 18",
-      "temp": 56,
+      "temp": 57,
       "tempLow": 47,
       "condition": "🌫️",
       "description": "Foggy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 31,
+      "rainChance": 26,
       "rawDate": "2026-04-18",
       "tides": {
         "high": [
@@ -171,13 +137,13 @@
     },
     {
       "date": "Sun, Apr 19",
-      "temp": 68,
-      "tempLow": 49,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 53,
+      "tempLow": 44,
+      "condition": "🌧️",
+      "description": "Rain",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 41,
+      "rainChance": 43,
       "rawDate": "2026-04-19",
       "tides": {
         "high": [
@@ -205,13 +171,13 @@
     },
     {
       "date": "Mon, Apr 20",
-      "temp": 50,
-      "tempLow": 37,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 45,
+      "tempLow": 36,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 41,
+      "rainChance": 43,
       "rawDate": "2026-04-20",
       "tides": {
         "high": [
@@ -232,6 +198,40 @@
           {
             "time": "8:17 PM",
             "height": "0.0"
+          }
+        ]
+      },
+      "isMoodDay": false
+    },
+    {
+      "date": "Tue, Apr 21",
+      "temp": 55,
+      "tempLow": 35,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 7,
+      "rawDate": "2026-04-21",
+      "tides": {
+        "high": [
+          {
+            "time": "2:27 AM",
+            "height": "11.4"
+          },
+          {
+            "time": "3:11 PM",
+            "height": "9.7"
+          }
+        ],
+        "low": [
+          {
+            "time": "8:57 AM",
+            "height": "-1.0"
+          },
+          {
+            "time": "9:10 PM",
+            "height": "0.4"
           }
         ]
       },

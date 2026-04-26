@@ -1,51 +1,17 @@
 {
-  "lastUpdated": "2026-04-25T06:21:17.397Z",
+  "lastUpdated": "2026-04-26T06:59:55.303Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 52,
-      "tempLow": 33,
+      "temp": 53,
+      "tempLow": 39,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 1,
-      "rawDate": "2026-04-25",
-      "tides": {
-        "high": [
-          {
-            "time": "6:39 AM",
-            "height": "9.7"
-          },
-          {
-            "time": "7:28 PM",
-            "height": "9.1"
-          }
-        ],
-        "low": [
-          {
-            "time": "12:20 AM",
-            "height": "1.4"
-          },
-          {
-            "time": "1:04 PM",
-            "height": "0.6"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
-      "date": "Sun, Apr 26",
-      "temp": 55,
-      "tempLow": 37,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 13,
+      "rainChance": 6,
       "rawDate": "2026-04-26",
       "tides": {
         "high": [
@@ -73,13 +39,13 @@
     },
     {
       "date": "Mon, Apr 27",
-      "temp": 54,
-      "tempLow": 44,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 59,
+      "tempLow": 38,
+      "condition": "🌫️",
+      "description": "Foggy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 17,
+      "rainChance": 4,
       "rawDate": "2026-04-27",
       "tides": {
         "high": [
@@ -108,12 +74,12 @@
     {
       "date": "Tue, Apr 28",
       "temp": 50,
-      "tempLow": 42,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "tempLow": 43,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 16,
+      "rainChance": 10,
       "rawDate": "2026-04-28",
       "tides": {
         "high": [
@@ -141,13 +107,13 @@
     },
     {
       "date": "Wed, Apr 29",
-      "temp": 45,
-      "tempLow": 43,
+      "temp": 48,
+      "tempLow": 44,
       "condition": "🌦️",
       "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 48,
+      "rainChance": 42,
       "rawDate": "2026-04-29",
       "tides": {
         "high": [
@@ -175,13 +141,13 @@
     },
     {
       "date": "Thu, Apr 30",
-      "temp": 49,
-      "tempLow": 44,
+      "temp": 51,
+      "tempLow": 47,
       "condition": "🌧️",
-      "description": "Rain",
+      "description": "Rain Showers",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 51,
+      "rainChance": 71,
       "rawDate": "2026-04-30",
       "tides": {
         "high": [
@@ -209,13 +175,13 @@
     },
     {
       "date": "Fri, May 1",
-      "temp": 47,
-      "tempLow": 42,
-      "condition": "🌧️",
-      "description": "Rain",
+      "temp": 48,
+      "tempLow": 43,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 36,
+      "rainChance": 46,
       "rawDate": "2026-05-01",
       "tides": {
         "high": [
@@ -232,6 +198,40 @@
           {
             "time": "5:59 PM",
             "height": "1.0"
+          }
+        ]
+      },
+      "isMoodDay": false
+    },
+    {
+      "date": "Sat, May 2",
+      "temp": 53,
+      "tempLow": 43,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 30,
+      "rawDate": "2026-05-02",
+      "tides": {
+        "high": [
+          {
+            "time": "12:09 AM",
+            "height": "10.3"
+          },
+          {
+            "time": "12:45 PM",
+            "height": "9.2"
+          }
+        ],
+        "low": [
+          {
+            "time": "6:30 AM",
+            "height": "0.0"
+          },
+          {
+            "time": "6:37 PM",
+            "height": "1.2"
           }
         ]
       },

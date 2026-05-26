@@ -1,39 +1,21 @@
 {
-  "lastUpdated": "2026-05-25T09:00:30.775Z",
+  "lastUpdated": "2026-05-26T00:03:14.649Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 74,
+      "temp": 73,
       "tempLow": 53,
-      "condition": "🌫️",
-      "description": "Foggy",
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 45,
+      "rainChance": 59,
       "rawDate": "2026-05-25",
       "tides": {
-        "high": [
-          {
-            "time": "7:26 AM",
-            "height": "9.3"
-          },
-          {
-            "time": "8:00 PM",
-            "height": "9.7"
-          }
-        ],
-        "low": [
-          {
-            "time": "1:09 AM",
-            "height": "1.2"
-          },
-          {
-            "time": "1:36 PM",
-            "height": "0.9"
-          }
-        ]
+        "high": [],
+        "low": []
       },
       "isMoodDay": false
     },
@@ -73,13 +55,13 @@
     },
     {
       "date": "Wed, May 27",
-      "temp": 83,
-      "tempLow": 59,
+      "temp": 84,
+      "tempLow": 60,
       "condition": "🌧️",
       "description": "Rain Showers",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 10,
+      "rainChance": 19,
       "rawDate": "2026-05-27",
       "tides": {
         "high": [
@@ -107,13 +89,13 @@
     },
     {
       "date": "Thu, May 28",
-      "temp": 65,
-      "tempLow": 54,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 68,
+      "tempLow": 56,
+      "condition": "🌧️",
+      "description": "Rain Showers",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 25,
+      "rainChance": 22,
       "rawDate": "2026-05-28",
       "tides": {
         "high": [
@@ -141,13 +123,13 @@
     },
     {
       "date": "Fri, May 29",
-      "temp": 56,
-      "tempLow": 50,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 63,
+      "tempLow": 53,
+      "condition": "🌧️",
+      "description": "Rain",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 21,
+      "rainChance": 32,
       "rawDate": "2026-05-29",
       "tides": {
         "high": [
@@ -175,13 +157,13 @@
     },
     {
       "date": "Sat, May 30",
-      "temp": 56,
-      "tempLow": 48,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 55,
+      "tempLow": 46,
+      "condition": "🌧️",
+      "description": "Rain Showers",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 30,
+      "rainChance": 37,
       "rawDate": "2026-05-30",
       "tides": {
         "high": [
@@ -209,13 +191,13 @@
     },
     {
       "date": "Sun, May 31",
-      "temp": 55,
-      "tempLow": 42,
+      "temp": 72,
+      "tempLow": 45,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 17,
+      "rainChance": 19,
       "rawDate": "2026-05-31",
       "tides": {
         "high": [
@@ -235,7 +217,7 @@
           }
         ]
       },
-      "isMoodDay": false
+      "isMoodDay": true
     }
   ]
 }

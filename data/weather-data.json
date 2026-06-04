@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-06-03T00:21:28.146Z",
+  "lastUpdated": "2026-06-04T00:23:07.134Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 75,
-      "tempLow": 42,
+      "temp": 80,
+      "tempLow": 50,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 4,
-      "rawDate": "2026-06-02",
+      "rainChance": 0,
+      "rawDate": "2026-06-03",
       "tides": {
         "high": [],
         "low": []
@@ -20,48 +20,14 @@
       "isMoodDay": false
     },
     {
-      "date": "Wed, Jun 3",
-      "temp": 74,
-      "tempLow": 50,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 2,
-      "rawDate": "2026-06-03",
-      "tides": {
-        "high": [
-          {
-            "time": "1:40 AM",
-            "height": "10.0"
-          },
-          {
-            "time": "2:22 PM",
-            "height": "8.7"
-          }
-        ],
-        "low": [
-          {
-            "time": "8:06 AM",
-            "height": "0.6"
-          },
-          {
-            "time": "8:11 PM",
-            "height": "1.8"
-          }
-        ]
-      },
-      "isMoodDay": true
-    },
-    {
       "date": "Thu, Jun 4",
-      "temp": 85,
-      "tempLow": 54,
+      "temp": 84,
+      "tempLow": 57,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 1,
+      "rainChance": 0,
       "rawDate": "2026-06-04",
       "tides": {
         "high": [
@@ -90,12 +56,12 @@
     {
       "date": "Fri, Jun 5",
       "temp": 83,
-      "tempLow": 62,
+      "tempLow": 57,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 1,
+      "rainChance": 0,
       "rawDate": "2026-06-05",
       "tides": {
         "high": [
@@ -123,13 +89,13 @@
     },
     {
       "date": "Sat, Jun 6",
-      "temp": 87,
-      "tempLow": 67,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 88,
+      "tempLow": 66,
+      "condition": "🌧️",
+      "description": "Rain Showers",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 27,
+      "rainChance": 22,
       "rawDate": "2026-06-06",
       "tides": {
         "high": [
@@ -157,13 +123,13 @@
     },
     {
       "date": "Sun, Jun 7",
-      "temp": 75,
-      "tempLow": 52,
+      "temp": 72,
+      "tempLow": 53,
       "condition": "🌦️",
       "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 52,
+      "rainChance": 71,
       "rawDate": "2026-06-07",
       "tides": {
         "high": [
@@ -191,13 +157,13 @@
     },
     {
       "date": "Mon, Jun 8",
-      "temp": 59,
+      "temp": 69,
       "tempLow": 52,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 33,
+      "rainChance": 28,
       "rawDate": "2026-06-08",
       "tides": {
         "high": [
@@ -217,7 +183,41 @@
           }
         ]
       },
-      "isMoodDay": false
+      "isMoodDay": true
+    },
+    {
+      "date": "Tue, Jun 9",
+      "temp": 74,
+      "tempLow": 55,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 15,
+      "rawDate": "2026-06-09",
+      "tides": {
+        "high": [
+          {
+            "time": "6:18 AM",
+            "height": "9.2"
+          },
+          {
+            "time": "6:48 PM",
+            "height": "9.7"
+          }
+        ],
+        "low": [
+          {
+            "time": "12:12 AM",
+            "height": "1.5"
+          },
+          {
+            "time": "12:33 PM",
+            "height": "1.0"
+          }
+        ]
+      },
+      "isMoodDay": true
     }
   ]
 }

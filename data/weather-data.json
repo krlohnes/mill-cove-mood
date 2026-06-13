@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-06-12T00:11:38.115Z",
+  "lastUpdated": "2026-06-13T00:10:08.569Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 90,
-      "tempLow": 66,
+      "temp": 92,
+      "tempLow": 72,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 23,
-      "rawDate": "2026-06-11",
+      "rainChance": 16,
+      "rawDate": "2026-06-12",
       "tides": {
         "high": [],
         "low": []
@@ -20,48 +20,14 @@
       "isMoodDay": false
     },
     {
-      "date": "Fri, Jun 12",
-      "temp": 90,
-      "tempLow": 72,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 18,
-      "rawDate": "2026-06-12",
-      "tides": {
-        "high": [
-          {
-            "time": "9:08 AM",
-            "height": "9.4"
-          },
-          {
-            "time": "9:25 PM",
-            "height": "11.2"
-          }
-        ],
-        "low": [
-          {
-            "time": "3:01 AM",
-            "height": "0.0"
-          },
-          {
-            "time": "3:12 PM",
-            "height": "0.6"
-          }
-        ]
-      },
-      "isMoodDay": false
-    },
-    {
       "date": "Sat, Jun 13",
-      "temp": 83,
-      "tempLow": 68,
+      "temp": 89,
+      "tempLow": 70,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 13,
+      "rainChance": 7,
       "rawDate": "2026-06-13",
       "tides": {
         "high": [
@@ -90,12 +56,12 @@
     {
       "date": "Sun, Jun 14",
       "temp": 88,
-      "tempLow": 65,
+      "tempLow": 64,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 41,
+      "rainChance": 51,
       "rawDate": "2026-06-14",
       "tides": {
         "high": [
@@ -123,13 +89,13 @@
     },
     {
       "date": "Mon, Jun 15",
-      "temp": 79,
-      "tempLow": 62,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 82,
+      "tempLow": 61,
+      "condition": "🌧️",
+      "description": "Rain Showers",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 61,
+      "rainChance": 55,
       "rawDate": "2026-06-15",
       "tides": {
         "high": [
@@ -153,13 +119,13 @@
     },
     {
       "date": "Tue, Jun 16",
-      "temp": 79,
-      "tempLow": 60,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 76,
+      "tempLow": 58,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 7,
+      "rainChance": 1,
       "rawDate": "2026-06-16",
       "tides": {
         "high": [
@@ -187,13 +153,13 @@
     },
     {
       "date": "Wed, Jun 17",
-      "temp": 67,
-      "tempLow": 59,
+      "temp": 83,
+      "tempLow": 58,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 13,
+      "rainChance": 8,
       "rawDate": "2026-06-17",
       "tides": {
         "high": [
@@ -218,6 +184,40 @@
         ]
       },
       "isMoodDay": true
+    },
+    {
+      "date": "Thu, Jun 18",
+      "temp": 76,
+      "tempLow": 63,
+      "condition": "🌦️",
+      "description": "Drizzle",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 35,
+      "rawDate": "2026-06-18",
+      "tides": {
+        "high": [
+          {
+            "time": "2:00 AM",
+            "height": "11.6"
+          },
+          {
+            "time": "2:46 PM",
+            "height": "10.1"
+          }
+        ],
+        "low": [
+          {
+            "time": "8:28 AM",
+            "height": "-1.1"
+          },
+          {
+            "time": "8:42 PM",
+            "height": "0.3"
+          }
+        ]
+      },
+      "isMoodDay": false
     }
   ]
 }

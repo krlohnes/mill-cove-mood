@@ -1,51 +1,17 @@
 {
-  "lastUpdated": "2026-07-24T07:35:10.426Z",
+  "lastUpdated": "2026-07-25T07:21:29.992Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 80,
-      "tempLow": 57,
+      "temp": 81,
+      "tempLow": 58,
       "condition": "☀️",
       "description": "Clear",
       "humidity": 50,
       "wind": "5 mph",
       "rainChance": 0,
-      "rawDate": "2026-07-24",
-      "tides": {
-        "high": [
-          {
-            "time": "8:18 AM",
-            "height": "8.1"
-          },
-          {
-            "time": "8:28 PM",
-            "height": "9.4"
-          }
-        ],
-        "low": [
-          {
-            "time": "2:03 AM",
-            "height": "1.4"
-          },
-          {
-            "time": "2:07 PM",
-            "height": "2.2"
-          }
-        ]
-      },
-      "isMoodDay": true
-    },
-    {
-      "date": "Sat, Jul 25",
-      "temp": 77,
-      "tempLow": 57,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 1,
       "rawDate": "2026-07-25",
       "tides": {
         "high": [
@@ -73,13 +39,13 @@
     },
     {
       "date": "Sun, Jul 26",
-      "temp": 70,
-      "tempLow": 57,
+      "temp": 71,
+      "tempLow": 55,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 5,
+      "rainChance": 1,
       "rawDate": "2026-07-26",
       "tides": {
         "high": [
@@ -107,13 +73,13 @@
     },
     {
       "date": "Mon, Jul 27",
-      "temp": 77,
-      "tempLow": 60,
-      "condition": "🌫️",
-      "description": "Foggy",
+      "temp": 80,
+      "tempLow": 58,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 5,
+      "rainChance": 2,
       "rawDate": "2026-07-27",
       "tides": {
         "high": [
@@ -141,13 +107,13 @@
     },
     {
       "date": "Tue, Jul 28",
-      "temp": 80,
+      "temp": 82,
       "tempLow": 63,
-      "condition": "🌧️",
-      "description": "Rain Showers",
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 48,
+      "rainChance": 59,
       "rawDate": "2026-07-28",
       "tides": {
         "high": [
@@ -175,13 +141,13 @@
     },
     {
       "date": "Wed, Jul 29",
-      "temp": 80,
-      "tempLow": 64,
-      "condition": "⛈️",
-      "description": "Thunderstorm",
+      "temp": 81,
+      "tempLow": 62,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 48,
+      "rainChance": 59,
       "rawDate": "2026-07-29",
       "tides": {
         "high": [
@@ -205,13 +171,13 @@
     },
     {
       "date": "Thu, Jul 30",
-      "temp": 70,
-      "tempLow": 65,
-      "condition": "🌧️",
-      "description": "Rain Showers",
+      "temp": 72,
+      "tempLow": 63,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 18,
+      "rainChance": 31,
       "rawDate": "2026-07-30",
       "tides": {
         "high": [
@@ -232,6 +198,40 @@
           {
             "time": "6:41 PM",
             "height": "1.2"
+          }
+        ]
+      },
+      "isMoodDay": false
+    },
+    {
+      "date": "Fri, Jul 31",
+      "temp": 78,
+      "tempLow": 60,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 21,
+      "rawDate": "2026-07-31",
+      "tides": {
+        "high": [
+          {
+            "time": "12:53 AM",
+            "height": "10.2"
+          },
+          {
+            "time": "1:26 PM",
+            "height": "9.3"
+          }
+        ],
+        "low": [
+          {
+            "time": "7:12 AM",
+            "height": "0.3"
+          },
+          {
+            "time": "7:22 PM",
+            "height": "1.0"
           }
         ]
       },

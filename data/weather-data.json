@@ -1,17 +1,19 @@
 {
-  "lastUpdated": "2026-07-26T07:38:11.074Z",
+  "lastUpdated": "2026-07-26T22:33:20.158Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 72,
+      "temp": 75,
       "tempLow": 55,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "condition": "🌫️",
+      "description": "Foggy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 0,
+      "rainChance": 1,
+      "sunrise": "5:30 AM",
+      "sunset": "8:09 PM",
       "rawDate": "2026-07-26",
       "tides": {
         "high": [
@@ -35,17 +37,20 @@
           }
         ]
       },
+      "oceanTemp": 64,
       "isMoodDay": false
     },
     {
       "date": "Mon, Jul 27",
-      "temp": 82,
-      "tempLow": 52,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 78,
+      "tempLow": 56,
+      "condition": "🌫️",
+      "description": "Foggy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 2,
+      "rainChance": 1,
+      "sunrise": "5:31 AM",
+      "sunset": "8:08 PM",
       "rawDate": "2026-07-27",
       "tides": {
         "high": [
@@ -69,17 +74,20 @@
           }
         ]
       },
+      "oceanTemp": 64,
       "isMoodDay": false
     },
     {
       "date": "Tue, Jul 28",
-      "temp": 79,
-      "tempLow": 63,
-      "condition": "⛈️",
-      "description": "Thunderstorm",
+      "temp": 83,
+      "tempLow": 58,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 34,
+      "rainChance": 19,
+      "sunrise": "5:32 AM",
+      "sunset": "8:07 PM",
       "rawDate": "2026-07-28",
       "tides": {
         "high": [
@@ -103,17 +111,20 @@
           }
         ]
       },
+      "oceanTemp": 65,
       "isMoodDay": false
     },
     {
       "date": "Wed, Jul 29",
-      "temp": 69,
-      "tempLow": 65,
+      "temp": 75,
+      "tempLow": 66,
       "condition": "🌧️",
       "description": "Rain Showers",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 67,
+      "rainChance": 84,
+      "sunrise": "5:33 AM",
+      "sunset": "8:06 PM",
       "rawDate": "2026-07-29",
       "tides": {
         "high": [
@@ -133,17 +144,20 @@
           }
         ]
       },
+      "oceanTemp": 61,
       "isMoodDay": false
     },
     {
       "date": "Thu, Jul 30",
-      "temp": 66,
-      "tempLow": 62,
-      "condition": "🌦️",
-      "description": "Drizzle",
+      "temp": 67,
+      "tempLow": 63,
+      "condition": "🌧️",
+      "description": "Rain Showers",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 58,
+      "rainChance": 70,
+      "sunrise": "5:34 AM",
+      "sunset": "8:05 PM",
       "rawDate": "2026-07-30",
       "tides": {
         "high": [
@@ -167,17 +181,20 @@
           }
         ]
       },
+      "oceanTemp": 60,
       "isMoodDay": false
     },
     {
       "date": "Fri, Jul 31",
-      "temp": 76,
-      "tempLow": 60,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
+      "temp": 67,
+      "tempLow": 63,
+      "condition": "🌦️",
+      "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 25,
+      "rainChance": 31,
+      "sunrise": "5:35 AM",
+      "sunset": "8:04 PM",
       "rawDate": "2026-07-31",
       "tides": {
         "high": [
@@ -201,17 +218,20 @@
           }
         ]
       },
-      "isMoodDay": true
+      "oceanTemp": 63,
+      "isMoodDay": false
     },
     {
       "date": "Sat, Aug 1",
-      "temp": 77,
-      "tempLow": 62,
+      "temp": 75,
+      "tempLow": 64,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 21,
+      "rainChance": 10,
+      "sunrise": "5:36 AM",
+      "sunset": "8:03 PM",
       "rawDate": "2026-08-01",
       "tides": {
         "high": [
@@ -235,6 +255,7 @@
           }
         ]
       },
+      "oceanTemp": 64,
       "isMoodDay": true
     }
   ]

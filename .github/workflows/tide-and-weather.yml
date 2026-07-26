@@ -102,7 +102,7 @@ jobs:
         class WeatherTideFetcher {
             async fetchWeatherData() {
                 // Using Open-Meteo - free weather API, no API key needed
-                const url = `https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.LATITUDE}&longitude=${CONFIG.LONGITUDE}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code&temperature_unit=fahrenheit&timezone=America/New_York&forecast_days=7`;
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.LATITUDE}&longitude=${CONFIG.LONGITUDE}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code,sunrise,sunset&temperature_unit=fahrenheit&timezone=America/New_York&forecast_days=7`;
 
                 const response = await fetch(url);
                 if (!response.ok) {
@@ -125,6 +125,9 @@ jobs:
                     const description = this.getWeatherDescription(weatherCode);
                     const displayDate = index === 0 ? 'Today' : date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
 
+                    const sunrise = this.formatISOTime(data.daily.sunrise[index]);
+                    const sunset = this.formatISOTime(data.daily.sunset[index]);
+
                     return {
                         date: displayDate,
                         temp: tempHigh,
@@ -134,6 +137,8 @@ jobs:
                         humidity: 50, // Open-Meteo doesn't provide humidity in free tier
                         wind: '5 mph', // Open-Meteo doesn't provide wind in free tier
                         rainChance: rainChance,
+                        sunrise: sunrise,
+                        sunset: sunset,
                         rawDate: dateStr
                     };
                 });
@@ -242,6 +247,62 @@ jobs:
                 return `${displayHour}:${minutes} ${ampm}`;
             }
 
+            formatISOTime(isoStr) {
+                // Open-Meteo returns local times like "2026-07-26T05:23"
+                if (!isoStr) return null;
+                const timePart = isoStr.split('T')[1];
+                if (!timePart) return null;
+                return this.formatTime(timePart);
+            }
+
+            async fetchOceanData() {
+                // Open-Meteo Marine API - free, no API key needed. Returns Celsius.
+                const url = `https://marine-api.open-meteo.com/v1/marine?latitude=${CONFIG.LATITUDE}&longitude=${CONFIG.LONGITUDE}&hourly=sea_surface_temperature&timezone=America/New_York&forecast_days=7`;
+
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`Marine API error: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    return this.processOceanData(data);
+                } catch (error) {
+                    // Ocean temp is a nice-to-have; don't fail the whole run without it
+                    console.error('Could not fetch ocean temperature:', error.message);
+                    return {};
+                }
+            }
+
+            processOceanData(data) {
+                const oceanByDate = {};
+                if (!data.hourly || !data.hourly.time) {
+                    return oceanByDate;
+                }
+
+                const times = data.hourly.time;
+                const temps = data.hourly.sea_surface_temperature;
+
+                // Collect all valid readings per date, then average
+                const sums = {};
+                times.forEach((dateTime, i) => {
+                    const date = dateTime.split('T')[0];
+                    const tempC = temps[i];
+                    if (tempC === null || tempC === undefined) return;
+                    if (!sums[date]) sums[date] = { total: 0, count: 0 };
+                    sums[date].total += tempC;
+                    sums[date].count += 1;
+                });
+
+                Object.keys(sums).forEach(date => {
+                    const avgC = sums[date].total / sums[date].count;
+                    const avgF = Math.round(avgC * 9 / 5 + 32);
+                    oceanByDate[date] = avgF;
+                    console.log(`${date}: Ocean temp ${avgF}°F`);
+                });
+
+                return oceanByDate;
+            }
+
             checkMoodDay(weather, tides) {
                 const hasGoodTide = tides.high.some(tide => {
                     const [timeStr, ampm] = tide.time.split(' ');
@@ -265,14 +326,19 @@ jobs:
                     console.log('Fetching tide data...');
                     const tideData = await this.fetchTideData();
 
+                    console.log('Fetching ocean temperature data...');
+                    const oceanData = await this.fetchOceanData();
+
                     console.log('Combining data...');
                     const combinedData = weatherData.map(day => {
                         const tides = tideData[day.rawDate] || { high: [], low: [] };
+                        const oceanTemp = oceanData[day.rawDate] ?? null;
                         const isMoodDay = this.checkMoodDay(day, tides);
 
                         return {
                             ...day,
                             tides,
+                            oceanTemp,
                             isMoodDay
                         };
                     });

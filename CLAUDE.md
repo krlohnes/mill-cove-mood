@@ -72,6 +72,9 @@ The workflow generates `data/weather-data.json` with this structure:
       "humidity": 45,
       "wind": "8 mph",
       "rainChance": 0,
+      "sunrise": "5:18 AM",
+      "sunset": "8:16 PM",
+      "oceanTemp": 64,
       "tides": {
         "high": ["6:32 AM", "7:15 PM"],
         "low": ["12:45 PM", "1:22 AM"]

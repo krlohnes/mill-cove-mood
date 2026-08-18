@@ -1,54 +1,17 @@
 {
-  "lastUpdated": "2026-08-17T05:38:25.152Z",
+  "lastUpdated": "2026-08-18T05:33:42.079Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "OpenWeatherMap & NOAA",
   "data": [
     {
       "date": "Today",
-      "temp": 74,
-      "tempLow": 67,
-      "condition": "🌦️",
-      "description": "Drizzle",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 19,
-      "sunrise": "5:53 AM",
-      "sunset": "7:41 PM",
-      "rawDate": "2026-08-17",
-      "tides": {
-        "high": [
-          {
-            "time": "3:06 AM",
-            "height": "10.1"
-          },
-          {
-            "time": "3:29 PM",
-            "height": "10.2"
-          }
-        ],
-        "low": [
-          {
-            "time": "9:13 AM",
-            "height": "0.4"
-          },
-          {
-            "time": "9:42 PM",
-            "height": "0.4"
-          }
-        ]
-      },
-      "oceanTemp": 67,
-      "isMoodDay": true
-    },
-    {
-      "date": "Tue, Aug 18",
-      "temp": 74,
+      "temp": 79,
       "tempLow": 66,
-      "condition": "🌧️",
-      "description": "Rain",
+      "condition": "🌫️",
+      "description": "Foggy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 17,
+      "rainChance": 7,
       "sunrise": "5:54 AM",
       "sunset": "7:40 PM",
       "rawDate": "2026-08-18",
@@ -74,18 +37,18 @@
           }
         ]
       },
-      "oceanTemp": 68,
+      "oceanTemp": 69,
       "isMoodDay": true
     },
     {
       "date": "Wed, Aug 19",
       "temp": 89,
-      "tempLow": 65,
+      "tempLow": 66,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 9,
+      "rainChance": 6,
       "sunrise": "5:55 AM",
       "sunset": "7:38 PM",
       "rawDate": "2026-08-19",
@@ -111,7 +74,7 @@
           }
         ]
       },
-      "oceanTemp": 69,
+      "oceanTemp": 70,
       "isMoodDay": true
     },
     {
@@ -122,7 +85,7 @@
       "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 27,
+      "rainChance": 37,
       "sunrise": "5:56 AM",
       "sunset": "7:37 PM",
       "rawDate": "2026-08-20",
@@ -144,8 +107,8 @@
           }
         ]
       },
-      "oceanTemp": 69,
-      "isMoodDay": true
+      "oceanTemp": 70,
+      "isMoodDay": false
     },
     {
       "date": "Fri, Aug 21",
@@ -155,7 +118,7 @@
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 20,
+      "rainChance": 11,
       "sunrise": "5:57 AM",
       "sunset": "7:35 PM",
       "rawDate": "2026-08-21",
@@ -181,7 +144,7 @@
           }
         ]
       },
-      "oceanTemp": 67,
+      "oceanTemp": 69,
       "isMoodDay": true
     },
     {
@@ -192,7 +155,7 @@
       "description": "Partly Cloudy",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 29,
+      "rainChance": 34,
       "sunrise": "5:58 AM",
       "sunset": "7:34 PM",
       "rawDate": "2026-08-22",
@@ -218,8 +181,8 @@
           }
         ]
       },
-      "oceanTemp": 67,
-      "isMoodDay": true
+      "oceanTemp": 69,
+      "isMoodDay": false
     },
     {
       "date": "Sun, Aug 23",
@@ -229,7 +192,7 @@
       "description": "Drizzle",
       "humidity": 50,
       "wind": "5 mph",
-      "rainChance": 44,
+      "rainChance": 47,
       "sunrise": "5:59 AM",
       "sunset": "7:32 PM",
       "rawDate": "2026-08-23",
@@ -255,7 +218,44 @@
           }
         ]
       },
-      "oceanTemp": 67,
+      "oceanTemp": 68,
+      "isMoodDay": false
+    },
+    {
+      "date": "Mon, Aug 24",
+      "temp": 77,
+      "tempLow": 61,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 50,
+      "wind": "5 mph",
+      "rainChance": 24,
+      "sunrise": "6:01 AM",
+      "sunset": "7:30 PM",
+      "rawDate": "2026-08-24",
+      "tides": {
+        "high": [
+          {
+            "time": "9:32 AM",
+            "height": "8.1"
+          },
+          {
+            "time": "9:38 PM",
+            "height": "9.5"
+          }
+        ],
+        "low": [
+          {
+            "time": "3:17 AM",
+            "height": "1.5"
+          },
+          {
+            "time": "3:19 PM",
+            "height": "2.1"
+          }
+        ]
+      },
+      "oceanTemp": 69,
       "isMoodDay": false
     }
   ]

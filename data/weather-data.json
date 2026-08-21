@@ -1,16 +1,17 @@
 {
-  "lastUpdated": "2026-08-21T05:36:14.866Z",
+  "lastUpdated": "2026-08-21T17:26:43.926Z",
   "location": "Weymouth, MA (Mill Cove)",
-  "source": "OpenWeatherMap & NOAA",
+  "source": "Open-Meteo, NOAA & foreriverbridge.com",
   "data": [
     {
       "date": "Today",
-      "temp": 70,
-      "tempLow": 63,
+      "temp": 73,
+      "tempLow": 65,
       "condition": "🌦️",
       "description": "Drizzle",
-      "humidity": 50,
-      "wind": "5 mph",
+      "humidity": 84,
+      "wind": "11 mph",
+      "uvIndex": 2,
       "rainChance": 49,
       "sunrise": "5:57 AM",
       "sunset": "7:35 PM",
@@ -38,17 +39,27 @@
         ]
       },
       "oceanTemp": 69,
+      "bridgeOpenings": [
+        {
+          "time": "9:08 AM",
+          "vessel": "CURTIS REINAUER",
+          "vesselType": "Pusher Tug",
+          "direction": "outbound",
+          "timestamp": "2026-08-21T13:08:48.288Z"
+        }
+      ],
       "isMoodDay": false
     },
     {
       "date": "Sat, Aug 22",
-      "temp": 70,
-      "tempLow": 62,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 43,
+      "temp": 67,
+      "tempLow": 65,
+      "condition": "🌫️",
+      "description": "Foggy",
+      "humidity": 91,
+      "wind": "8 mph",
+      "uvIndex": 1,
+      "rainChance": 12,
       "sunrise": "5:58 AM",
       "sunset": "7:34 PM",
       "rawDate": "2026-08-22",
@@ -75,17 +86,19 @@
         ]
       },
       "oceanTemp": 69,
-      "isMoodDay": false
+      "bridgeOpenings": [],
+      "isMoodDay": true
     },
     {
       "date": "Sun, Aug 23",
-      "temp": 71,
-      "tempLow": 62,
+      "temp": 74,
+      "tempLow": 64,
       "condition": "🌦️",
       "description": "Drizzle",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 50,
+      "humidity": 90,
+      "wind": "7 mph",
+      "uvIndex": 4,
+      "rainChance": 52,
       "sunrise": "5:59 AM",
       "sunset": "7:32 PM",
       "rawDate": "2026-08-23",
@@ -111,18 +124,20 @@
           }
         ]
       },
-      "oceanTemp": 70,
+      "oceanTemp": 69,
+      "bridgeOpenings": [],
       "isMoodDay": false
     },
     {
       "date": "Mon, Aug 24",
-      "temp": 82,
-      "tempLow": 64,
+      "temp": 81,
+      "tempLow": 63,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 8,
+      "humidity": 66,
+      "wind": "14 mph",
+      "uvIndex": 7,
+      "rainChance": 6,
       "sunrise": "6:01 AM",
       "sunset": "7:30 PM",
       "rawDate": "2026-08-24",
@@ -149,17 +164,19 @@
         ]
       },
       "oceanTemp": 70,
+      "bridgeOpenings": [],
       "isMoodDay": false
     },
     {
       "date": "Tue, Aug 25",
-      "temp": 81,
+      "temp": 75,
       "tempLow": 61,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 2,
+      "humidity": 60,
+      "wind": "11 mph",
+      "uvIndex": 5,
+      "rainChance": 1,
       "sunrise": "6:02 AM",
       "sunset": "7:29 PM",
       "rawDate": "2026-08-25",
@@ -186,17 +203,19 @@
         ]
       },
       "oceanTemp": 70,
+      "bridgeOpenings": [],
       "isMoodDay": false
     },
     {
       "date": "Wed, Aug 26",
-      "temp": 86,
-      "tempLow": 64,
+      "temp": 82,
+      "tempLow": 60,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 7,
+      "humidity": 59,
+      "wind": "8 mph",
+      "uvIndex": 7,
+      "rainChance": 4,
       "sunrise": "6:03 AM",
       "sunset": "7:27 PM",
       "rawDate": "2026-08-26",
@@ -223,17 +242,19 @@
         ]
       },
       "oceanTemp": 70,
+      "bridgeOpenings": [],
       "isMoodDay": false
     },
     {
       "date": "Thu, Aug 27",
-      "temp": 76,
-      "tempLow": 66,
-      "condition": "🌧️",
-      "description": "Rain Showers",
-      "humidity": 50,
-      "wind": "5 mph",
-      "rainChance": 34,
+      "temp": 83,
+      "tempLow": 64,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 61,
+      "wind": "11 mph",
+      "uvIndex": 7,
+      "rainChance": 32,
       "sunrise": "6:04 AM",
       "sunset": "7:26 PM",
       "rawDate": "2026-08-27",
@@ -259,7 +280,8 @@
           }
         ]
       },
-      "oceanTemp": 70,
+      "oceanTemp": 71,
+      "bridgeOpenings": [],
       "isMoodDay": false
     }
   ]

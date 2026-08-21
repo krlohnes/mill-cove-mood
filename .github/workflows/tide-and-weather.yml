@@ -102,7 +102,7 @@ jobs:
         class WeatherTideFetcher {
             async fetchWeatherData() {
                 // Using Open-Meteo - free weather API, no API key needed
-                const url = `https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.LATITUDE}&longitude=${CONFIG.LONGITUDE}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code,sunrise,sunset&temperature_unit=fahrenheit&timezone=America/New_York&forecast_days=7`;
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${CONFIG.LATITUDE}&longitude=${CONFIG.LONGITUDE}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code,sunrise,sunset,wind_speed_10m_max,relative_humidity_2m_mean,uv_index_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America/New_York&forecast_days=7`;
 
                 const response = await fetch(url);
                 if (!response.ok) {
@@ -123,10 +123,14 @@ jobs:
 
                     const weatherEmoji = this.getWeatherEmojiFromCode(weatherCode);
                     const description = this.getWeatherDescription(weatherCode);
-                    const displayDate = index === 0 ? 'Today' : date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+                    const displayDate = index === 0 ? 'Today' : date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' });
 
                     const sunrise = this.formatISOTime(data.daily.sunrise[index]);
                     const sunset = this.formatISOTime(data.daily.sunset[index]);
+
+                    const humidityRaw = data.daily.relative_humidity_2m_mean?.[index];
+                    const windRaw = data.daily.wind_speed_10m_max?.[index];
+                    const uvRaw = data.daily.uv_index_max?.[index];
 
                     return {
                         date: displayDate,
@@ -134,8 +138,9 @@ jobs:
                         tempLow: tempLow,
                         condition: weatherEmoji,
                         description: description,
-                        humidity: 50, // Open-Meteo doesn't provide humidity in free tier
-                        wind: '5 mph', // Open-Meteo doesn't provide wind in free tier
+                        humidity: humidityRaw != null ? Math.round(humidityRaw) : null,
+                        wind: windRaw != null ? `${Math.round(windRaw)} mph` : null,
+                        uvIndex: uvRaw != null ? Math.round(uvRaw) : null,
                         rainChance: rainChance,
                         sunrise: sunrise,
                         sunset: sunset,
@@ -303,6 +308,70 @@ jobs:
                 return oceanByDate;
             }
 
+            async fetchBridgeData() {
+                // Fore River Bridge openings (community API, no key needed)
+                const url = 'https://foreriverbridge.com/api/bridge/openings';
+
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`Bridge API error: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    return this.processBridgeData(data);
+                } catch (error) {
+                    // Bridge openings are a nice-to-have; don't fail the whole run without them
+                    console.error('Could not fetch bridge openings:', error.message);
+                    return {};
+                }
+            }
+
+            processBridgeData(openings) {
+                const bridgeByDate = {};
+                if (!Array.isArray(openings)) {
+                    return bridgeByDate;
+                }
+
+                openings.forEach(opening => {
+                    // Prefer the observed crossing time over the scheduled one
+                    const when = opening.actualCrossingTime || opening.scheduledTime;
+                    if (!when) return;
+                    const dt = new Date(when);
+                    if (isNaN(dt)) return;
+
+                    const date = dt.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+                    const time = dt.toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit' });
+
+                    // southbound = inbound (up the Fore River), northbound = outbound (to sea)
+                    const reason = (opening.reason || '').toLowerCase();
+                    let direction = null;
+                    if (reason.includes('inbound') || opening.direction === 'southbound') {
+                        direction = 'inbound';
+                    } else if (reason.includes('outbound') || opening.direction === 'northbound') {
+                        direction = 'outbound';
+                    }
+
+                    const vessel = opening.shipName && opening.shipName !== 'UNKNOWN' ? opening.shipName : null;
+
+                    if (!bridgeByDate[date]) bridgeByDate[date] = [];
+                    bridgeByDate[date].push({
+                        time,
+                        vessel,
+                        vesselType: opening.shipType || null,
+                        direction,
+                        timestamp: when
+                    });
+                });
+
+                Object.keys(bridgeByDate).forEach(date => {
+                    const list = bridgeByDate[date];
+                    list.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+                    console.log(`${date}: Bridge openings: ${list.map(o => `${o.time} ${o.vessel || 'unknown vessel'} (${o.direction || '?'})`).join(', ')}`);
+                });
+
+                return bridgeByDate;
+            }
+
             checkMoodDay(weather, tides) {
                 const hasGoodTide = tides.high.some(tide => {
                     const [timeStr, ampm] = tide.time.split(' ');
@@ -329,16 +398,21 @@ jobs:
                     console.log('Fetching ocean temperature data...');
                     const oceanData = await this.fetchOceanData();
 
+                    console.log('Fetching bridge opening data...');
+                    const bridgeData = await this.fetchBridgeData();
+
                     console.log('Combining data...');
                     const combinedData = weatherData.map(day => {
                         const tides = tideData[day.rawDate] || { high: [], low: [] };
                         const oceanTemp = oceanData[day.rawDate] ?? null;
+                        const bridgeOpenings = bridgeData[day.rawDate] || [];
                         const isMoodDay = this.checkMoodDay(day, tides);
 
                         return {
                             ...day,
                             tides,
                             oceanTemp,
+                            bridgeOpenings,
                             isMoodDay
                         };
                     });
@@ -347,7 +421,7 @@ jobs:
                     const output = {
                         lastUpdated: new Date().toISOString(),
                         location: 'Weymouth, MA (Mill Cove)',
-                        source: 'OpenWeatherMap & NOAA',
+                        source: 'Open-Meteo, NOAA & foreriverbridge.com',
                         data: combinedData
                     };
 

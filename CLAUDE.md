@@ -10,7 +10,7 @@ Mill Cove Mood is a single-page weather application that displays weather condit
 
 - **Frontend**: Single HTML file (`index.html`) with embedded CSS and JavaScript
 - **Data Source**: Automated GitHub Actions workflow fetches real weather/tide data
-- **APIs**: OpenWeatherMap for weather, NOAA for tide data
+- **APIs**: Open-Meteo for weather (incl. wind, humidity, UV, ocean temp), NOAA for tide data, foreriverbridge.com for Fore River Bridge openings/vessel transits
 - **Deployment**: Static site (can be hosted on GitHub Pages)
 
 ## Key Files
@@ -71,6 +71,7 @@ The workflow generates `data/weather-data.json` with this structure:
       "description": "Clear",
       "humidity": 45,
       "wind": "8 mph",
+      "uvIndex": 6,
       "rainChance": 0,
       "sunrise": "5:18 AM",
       "sunset": "8:16 PM",
@@ -79,6 +80,15 @@ The workflow generates `data/weather-data.json` with this structure:
         "high": ["6:32 AM", "7:15 PM"],
         "low": ["12:45 PM", "1:22 AM"]
       },
+      "bridgeOpenings": [
+        {
+          "time": "9:08 AM",
+          "vessel": "CURTIS REINAUER",
+          "vesselType": "Pusher Tug",
+          "direction": "outbound",
+          "timestamp": "2026-08-21T13:08:48.288Z"
+        }
+      ],
       "isMoodDay": true
     }
   ]

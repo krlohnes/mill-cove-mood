@@ -308,22 +308,38 @@ jobs:
                 return oceanByDate;
             }
 
-            async fetchBridgeData() {
-                // Fore River Bridge openings (community API, no key needed)
-                const url = 'https://foreriverbridge.com/api/bridge/openings';
-
-                try {
-                    const response = await fetch(url);
-                    if (!response.ok) {
-                        throw new Error(`Bridge API error: ${response.status}`);
-                    }
-                    const data = await response.json();
-                    return this.processBridgeData(data);
-                } catch (error) {
-                    // Bridge openings are a nice-to-have; don't fail the whole run without them
-                    console.error('Could not fetch bridge openings:', error.message);
-                    return {};
+            async fetchBridgeEndpoint(url) {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Bridge API error: ${response.status}`);
                 }
+                return response.json();
+            }
+
+            async fetchBridgeData() {
+                // Fore River Bridge (community API, no key needed).
+                // /openings is history only; announced future lifts come from /schedule.
+                const results = await Promise.allSettled([
+                    this.fetchBridgeEndpoint('https://foreriverbridge.com/api/bridge/schedule'),
+                    this.fetchBridgeEndpoint('https://foreriverbridge.com/api/bridge/openings')
+                ]);
+
+                // Merge by id; /openings entries win so completed lifts carry actual data
+                const byId = new Map();
+                results.forEach(result => {
+                    if (result.status !== 'fulfilled' || !Array.isArray(result.value)) {
+                        if (result.status === 'rejected') {
+                            // Bridge data is a nice-to-have; don't fail the whole run without it
+                            console.error('Could not fetch bridge data:', result.reason?.message);
+                        }
+                        return;
+                    }
+                    result.value.forEach(opening => {
+                        byId.set(opening.id || String(opening.openingNumber), opening);
+                    });
+                });
+
+                return this.processBridgeData([...byId.values()]);
             }
 
             processBridgeData(openings) {
@@ -351,7 +367,8 @@ jobs:
                         direction = 'outbound';
                     }
 
-                    const vessel = opening.shipName && opening.shipName !== 'UNKNOWN' ? opening.shipName : null;
+                    const vessel = opening.shipName && opening.shipName !== 'UNKNOWN' ? opening.shipName :
+                                   (typeof opening.expectedVessel === 'string' && opening.expectedVessel ? opening.expectedVessel : null);
 
                     if (!bridgeByDate[date]) bridgeByDate[date] = [];
                     bridgeByDate[date].push({

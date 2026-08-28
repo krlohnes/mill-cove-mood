@@ -175,10 +175,11 @@ jobs:
             }
 
             async fetchTideData() {
-                // Running at local midnight, so get 7 days starting today
+                // Date range must be computed in Eastern time to match the
+                // weather data's days — the runner's clock is UTC, which is
+                // already "tomorrow" when a run happens after 8pm ET.
                 const startDate = new Date();
-                const endDate = new Date();
-                endDate.setDate(startDate.getDate() + 7);
+                const endDate = new Date(startDate.getTime() + 7 * 24 * 60 * 60 * 1000);
 
                 const startDateStr = this.formatDateForNOAA(startDate);
                 const endDateStr = this.formatDateForNOAA(endDate);
@@ -197,9 +198,9 @@ jobs:
             }
 
             formatDateForNOAA(date) {
-                return date.getFullYear() +
-                       String(date.getMonth() + 1).padStart(2, '0') +
-                       String(date.getDate()).padStart(2, '0');
+                // YYYYMMDD in Eastern time (en-CA formats as YYYY-MM-DD)
+                return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York' })
+                    .format(date).replace(/-/g, '');
             }
 
             processTideData(data) {

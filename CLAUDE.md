@@ -37,6 +37,24 @@ Mill Cove Mood is a single-page weather application that displays weather condit
 gh workflow run "Fetch Weather & Tide Data"
 ```
 
+## Trash & Yard Waste
+
+Each forecast card shows a trash-pickup indicator (and a yard-waste indicator during
+yard-waste weeks) for **Gilmore St** (Friday pickup, yard-waste Zone A). This is
+computed entirely client-side in `index.html` from `WASTE_CONFIG` (no API/workflow
+dependency), so it works even in demo/fallback mode.
+
+- Schedule data (yard-waste week Mondays, holidays with `delayDays`, season bounds)
+  is sourced from the `krlohnes/weymouth-waste-pickup` project (`data/2026`) and is
+  currently hardcoded for 2026 — update `WASTE_CONFIG` each year.
+- `computeWaste(rawDate)` mirrors that project's logic: a weekday holiday on or
+  before the normal pickup day pushes pickup back by `delayDays` (e.g. Labor Day
+  shifts Friday pickup to Saturday), and yard waste rides on the actual pickup day
+  during in-season Zone A weeks.
+- The indicator only renders on a day that is the actual pickup day, so a delay can
+  move it off Friday and onto Saturday (and out of the 7-day window entirely on some
+  holiday weeks).
+
 ## MOOD Day Logic
 
 A day qualifies as a "MOOD" day when ALL conditions are met:

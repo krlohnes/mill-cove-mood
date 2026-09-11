@@ -1,15 +1,15 @@
 {
-  "lastUpdated": "2026-09-10T09:28:14.924Z",
+  "lastUpdated": "2026-09-11T00:37:44.626Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "Open-Meteo, NOAA & foreriverbridge.com",
   "data": [
     {
       "date": "Today",
-      "temp": 87,
-      "tempLow": 70,
+      "temp": 86,
+      "tempLow": 71,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 55,
+      "humidity": 58,
       "wind": "18 mph",
       "uvIndex": 6,
       "rainChance": 28,
@@ -38,25 +38,25 @@
           }
         ]
       },
-      "oceanTemp": 68,
+      "oceanTemp": 67,
       "bridgeOpenings": [
         {
-          "time": "5:50 AM",
+          "time": "6:15 AM",
           "vessel": "TIMOTHY L. REINAUER",
-          "vesselType": "Tug/Barge (56)",
+          "vesselType": "Pusher Tug",
           "direction": "outbound",
-          "timestamp": "2026-09-10T09:50:00.000Z"
+          "timestamp": "2026-09-10T10:15:15.438Z"
         }
       ],
       "isMoodDay": false
     },
     {
       "date": "Fri, Sep 11",
-      "temp": 78,
+      "temp": 79,
       "tempLow": 61,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 46,
+      "humidity": 47,
       "wind": "10 mph",
       "uvIndex": 6,
       "rainChance": 0,
@@ -87,14 +87,14 @@
     },
     {
       "date": "Sat, Sep 12",
-      "temp": 80,
-      "tempLow": 58,
+      "temp": 79,
+      "tempLow": 53,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 50,
-      "wind": "11 mph",
+      "humidity": 58,
+      "wind": "10 mph",
       "uvIndex": 6,
-      "rainChance": 1,
+      "rainChance": 2,
       "sunrise": "6:20 AM",
       "sunset": "6:58 PM",
       "rawDate": "2026-09-12",
@@ -120,20 +120,20 @@
           }
         ]
       },
-      "oceanTemp": 68,
+      "oceanTemp": 67,
       "bridgeOpenings": [],
       "isMoodDay": true
     },
     {
       "date": "Sun, Sep 13",
       "temp": 72,
-      "tempLow": 62,
+      "tempLow": 64,
       "condition": "🌧️",
       "description": "Rain Showers",
-      "humidity": 91,
-      "wind": "6 mph",
-      "uvIndex": 2,
-      "rainChance": 45,
+      "humidity": 93,
+      "wind": "10 mph",
+      "uvIndex": 3,
+      "rainChance": 64,
       "sunrise": "6:21 AM",
       "sunset": "6:56 PM",
       "rawDate": "2026-09-13",
@@ -165,14 +165,14 @@
     },
     {
       "date": "Mon, Sep 14",
-      "temp": 76,
+      "temp": 73,
       "tempLow": 62,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 65,
-      "wind": "11 mph",
+      "humidity": 56,
+      "wind": "10 mph",
       "uvIndex": 6,
-      "rainChance": 5,
+      "rainChance": 11,
       "sunrise": "6:22 AM",
       "sunset": "6:54 PM",
       "rawDate": "2026-09-14",
@@ -198,20 +198,20 @@
           }
         ]
       },
-      "oceanTemp": 69,
+      "oceanTemp": 68,
       "bridgeOpenings": [],
       "isMoodDay": true
     },
     {
       "date": "Tue, Sep 15",
-      "temp": 75,
-      "tempLow": 60,
+      "temp": 73,
+      "tempLow": 58,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 57,
-      "wind": "12 mph",
+      "humidity": 59,
+      "wind": "10 mph",
       "uvIndex": 6,
-      "rainChance": 1,
+      "rainChance": 2,
       "sunrise": "6:23 AM",
       "sunset": "6:53 PM",
       "rawDate": "2026-09-15",
@@ -243,14 +243,14 @@
     },
     {
       "date": "Wed, Sep 16",
-      "temp": 85,
-      "tempLow": 62,
-      "condition": "☀️",
-      "description": "Clear",
-      "humidity": 66,
+      "temp": 79,
+      "tempLow": 61,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 68,
       "wind": "11 mph",
       "uvIndex": 6,
-      "rainChance": 28,
+      "rainChance": 17,
       "sunrise": "6:24 AM",
       "sunset": "6:51 PM",
       "rawDate": "2026-09-16",
@@ -276,7 +276,7 @@
           }
         ]
       },
-      "oceanTemp": 67,
+      "oceanTemp": 68,
       "bridgeOpenings": [],
       "isMoodDay": true
     }

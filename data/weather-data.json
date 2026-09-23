@@ -1,55 +1,16 @@
 {
-  "lastUpdated": "2026-09-22T00:19:35.407Z",
+  "lastUpdated": "2026-09-23T00:59:22.464Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "Open-Meteo, NOAA & foreriverbridge.com",
   "data": [
     {
       "date": "Today",
-      "temp": 63,
-      "tempLow": 55,
-      "condition": "🌧️",
-      "description": "Rain",
-      "humidity": 84,
-      "wind": "12 mph",
-      "uvIndex": 6,
-      "rainChance": 45,
-      "sunrise": "6:30 AM",
-      "sunset": "6:42 PM",
-      "rawDate": "2026-09-21",
-      "tides": {
-        "high": [
-          {
-            "time": "7:59 AM",
-            "height": "8.0"
-          },
-          {
-            "time": "8:08 PM",
-            "height": "9.1"
-          }
-        ],
-        "low": [
-          {
-            "time": "1:40 AM",
-            "height": "1.8"
-          },
-          {
-            "time": "1:49 PM",
-            "height": "2.4"
-          }
-        ]
-      },
-      "oceanTemp": 65,
-      "bridgeOpenings": [],
-      "isMoodDay": false
-    },
-    {
-      "date": "Tue, Sep 22",
-      "temp": 61,
-      "tempLow": 52,
+      "temp": 62,
+      "tempLow": 51,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 70,
-      "wind": "14 mph",
+      "humidity": 72,
+      "wind": "15 mph",
       "uvIndex": 6,
       "rainChance": 3,
       "sunrise": "6:31 AM",
@@ -83,11 +44,11 @@
     },
     {
       "date": "Wed, Sep 23",
-      "temp": 61,
+      "temp": 63,
       "tempLow": 51,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 61,
+      "humidity": 63,
       "wind": "17 mph",
       "uvIndex": 5,
       "rainChance": 0,
@@ -117,19 +78,27 @@
         ]
       },
       "oceanTemp": 64,
-      "bridgeOpenings": [],
+      "bridgeOpenings": [
+        {
+          "time": "9:00 AM",
+          "vessel": null,
+          "vesselType": null,
+          "direction": null,
+          "timestamp": "2026-09-23T13:00:00.000Z"
+        }
+      ],
       "isMoodDay": false
     },
     {
       "date": "Thu, Sep 24",
       "temp": 60,
-      "tempLow": 56,
+      "tempLow": 54,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 63,
-      "wind": "17 mph",
-      "uvIndex": 6,
-      "rainChance": 10,
+      "humidity": 64,
+      "wind": "16 mph",
+      "uvIndex": 5,
+      "rainChance": 4,
       "sunrise": "6:33 AM",
       "sunset": "6:37 PM",
       "rawDate": "2026-09-24",
@@ -156,19 +125,27 @@
         ]
       },
       "oceanTemp": 63,
-      "bridgeOpenings": [],
+      "bridgeOpenings": [
+        {
+          "time": "9:00 AM",
+          "vessel": null,
+          "vesselType": null,
+          "direction": null,
+          "timestamp": "2026-09-24T13:00:00.000Z"
+        }
+      ],
       "isMoodDay": false
     },
     {
       "date": "Fri, Sep 25",
-      "temp": 62,
+      "temp": 58,
       "tempLow": 55,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
-      "humidity": 64,
-      "wind": "20 mph",
-      "uvIndex": 4,
-      "rainChance": 50,
+      "condition": "🌧️",
+      "description": "Rain",
+      "humidity": 74,
+      "wind": "32 mph",
+      "uvIndex": 1,
+      "rainChance": 47,
       "sunrise": "6:34 AM",
       "sunset": "6:35 PM",
       "rawDate": "2026-09-25",
@@ -200,14 +177,14 @@
     },
     {
       "date": "Sat, Sep 26",
-      "temp": 66,
-      "tempLow": 53,
+      "temp": 56,
+      "tempLow": 55,
       "condition": "🌧️",
       "description": "Rain",
-      "humidity": 67,
-      "wind": "21 mph",
-      "uvIndex": 2,
-      "rainChance": 58,
+      "humidity": 95,
+      "wind": "32 mph",
+      "uvIndex": 0,
+      "rainChance": 63,
       "sunrise": "6:35 AM",
       "sunset": "6:33 PM",
       "rawDate": "2026-09-26",
@@ -233,20 +210,20 @@
           }
         ]
       },
-      "oceanTemp": 61,
+      "oceanTemp": 62,
       "bridgeOpenings": [],
       "isMoodDay": false
     },
     {
       "date": "Sun, Sep 27",
-      "temp": 64,
-      "tempLow": 60,
-      "condition": "🌦️",
-      "description": "Drizzle",
-      "humidity": 54,
-      "wind": "17 mph",
-      "uvIndex": 1,
-      "rainChance": 55,
+      "temp": 56,
+      "tempLow": 54,
+      "condition": "🌧️",
+      "description": "Rain",
+      "humidity": 96,
+      "wind": "30 mph",
+      "uvIndex": 0,
+      "rainChance": 62,
       "sunrise": "6:36 AM",
       "sunset": "6:32 PM",
       "rawDate": "2026-09-27",
@@ -265,6 +242,45 @@
           {
             "time": "6:27 PM",
             "height": "-0.3"
+          }
+        ]
+      },
+      "oceanTemp": 61,
+      "bridgeOpenings": [],
+      "isMoodDay": false
+    },
+    {
+      "date": "Mon, Sep 28",
+      "temp": 62,
+      "tempLow": 54,
+      "condition": "🌦️",
+      "description": "Drizzle",
+      "humidity": 85,
+      "wind": "12 mph",
+      "uvIndex": 2,
+      "rainChance": 56,
+      "sunrise": "6:37 AM",
+      "sunset": "6:30 PM",
+      "rawDate": "2026-09-28",
+      "tides": {
+        "high": [
+          {
+            "time": "12:36 AM",
+            "height": "10.3"
+          },
+          {
+            "time": "12:51 PM",
+            "height": "10.9"
+          }
+        ],
+        "low": [
+          {
+            "time": "6:43 AM",
+            "height": "0.0"
+          },
+          {
+            "time": "7:11 PM",
+            "height": "-0.6"
           }
         ]
       },

@@ -35,9 +35,9 @@ jobs:
       env:
         FORCE_RUN: ${{ github.event.inputs.force_run }}
       run: |
-        # Always run at midnight or if manually forced
+        # Always run at the daily 5am UTC slot (midnight EST / 1am EDT) or if manually forced
         CURRENT_HOUR=$(date -u +%H)
-        IS_MIDNIGHT=$([[ "$CURRENT_HOUR" == "00" ]] && echo "true" || echo "false")
+        IS_MIDNIGHT=$([[ "$CURRENT_HOUR" == "05" ]] && echo "true" || echo "false")
         IS_MANUAL=$([[ "$FORCE_RUN" == "true" ]] && echo "true" || echo "false")
 
         if [[ "$IS_MIDNIGHT" == "true" || "$IS_MANUAL" == "true" ]]; then
@@ -51,13 +51,15 @@ jobs:
           LAST_SUCCESS=$(node -pe "
             try {
               const data = JSON.parse(require('fs').readFileSync('data/weather-data.json', 'utf8'));
-              new Date(data.lastUpdated).toISOString().split('T')[0];
+              new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York' }).format(new Date(data.lastUpdated));
             } catch(e) {
               '';
             }
           ")
 
-          TODAY=$(date -u +%Y-%m-%d)
+          # Compare in Eastern time: the forecast days are Eastern, so data fetched
+          # after 8pm ET (already "tomorrow" in UTC) is still yesterday's forecast
+          TODAY=$(TZ=America/New_York date +%Y-%m-%d)
 
           if [[ "$LAST_SUCCESS" == "$TODAY" ]]; then
             echo "should_run=false" >> $GITHUB_OUTPUT

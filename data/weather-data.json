@@ -1,65 +1,18 @@
 {
-  "lastUpdated": "2026-10-02T10:58:01.225Z",
+  "lastUpdated": "2026-10-03T10:17:17.614Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "Open-Meteo, NOAA & foreriverbridge.com",
   "data": [
     {
       "date": "Today",
-      "temp": 79,
-      "tempLow": 65,
-      "condition": "🌧️",
-      "description": "Rain",
-      "humidity": 80,
-      "wind": "12 mph",
-      "uvIndex": 5,
-      "rainChance": 46,
-      "sunrise": "6:41 AM",
-      "sunset": "6:23 PM",
-      "rawDate": "2026-10-02",
-      "tides": {
-        "high": [
-          {
-            "time": "3:50 AM",
-            "height": "9.3"
-          },
-          {
-            "time": "4:04 PM",
-            "height": "10.7"
-          }
-        ],
-        "low": [
-          {
-            "time": "9:52 AM",
-            "height": "0.9"
-          },
-          {
-            "time": "10:38 PM",
-            "height": "0.1"
-          }
-        ]
-      },
-      "oceanTemp": 63,
-      "bridgeOpenings": [
-        {
-          "time": "9:00 AM",
-          "vessel": "CURTIS REINAUER",
-          "vesselType": "Tug/Barge (56)",
-          "direction": "inbound",
-          "timestamp": "2026-10-02T13:00:00.000Z"
-        }
-      ],
-      "isMoodDay": false
-    },
-    {
-      "date": "Sat, Oct 3",
-      "temp": 64,
-      "tempLow": 52,
-      "condition": "🌦️",
-      "description": "Drizzle",
-      "humidity": 78,
+      "temp": 66,
+      "tempLow": 51,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 76,
       "wind": "10 mph",
       "uvIndex": 5,
-      "rainChance": 22,
+      "rainChance": 13,
       "sunrise": "6:43 AM",
       "sunset": "6:21 PM",
       "rawDate": "2026-10-03",
@@ -88,25 +41,32 @@
       "oceanTemp": 63,
       "bridgeOpenings": [
         {
-          "time": "6:45 AM",
-          "vessel": null,
+          "time": "7:00 AM",
+          "vessel": "CURTIS REINAUER",
           "vesselType": "Tug/Barge (56)",
           "direction": "outbound",
-          "timestamp": "2026-10-03T10:45:00.000Z"
+          "timestamp": "2026-10-03T11:00:00.000Z"
+        },
+        {
+          "time": "2:00 PM",
+          "vessel": null,
+          "vesselType": null,
+          "direction": "inbound",
+          "timestamp": "2026-10-03T18:00:00.000Z"
         }
       ],
       "isMoodDay": true
     },
     {
       "date": "Sun, Oct 4",
-      "temp": 63,
-      "tempLow": 53,
+      "temp": 62,
+      "tempLow": 48,
       "condition": "🌦️",
       "description": "Drizzle",
-      "humidity": 74,
-      "wind": "10 mph",
-      "uvIndex": 4,
-      "rainChance": 25,
+      "humidity": 78,
+      "wind": "8 mph",
+      "uvIndex": 5,
+      "rainChance": 40,
       "sunrise": "6:44 AM",
       "sunset": "6:19 PM",
       "rawDate": "2026-10-04",
@@ -128,20 +88,28 @@
           }
         ]
       },
-      "oceanTemp": 63,
-      "bridgeOpenings": [],
-      "isMoodDay": true
+      "oceanTemp": 62,
+      "bridgeOpenings": [
+        {
+          "time": "7:00 AM",
+          "vessel": "CURTIS REINAUER",
+          "vesselType": "Tug/Barge (56)",
+          "direction": "outbound",
+          "timestamp": "2026-10-04T11:00:00.000Z"
+        }
+      ],
+      "isMoodDay": false
     },
     {
       "date": "Mon, Oct 5",
-      "temp": 69,
-      "tempLow": 51,
-      "condition": "🌧️",
-      "description": "Rain",
-      "humidity": 71,
-      "wind": "17 mph",
+      "temp": 70,
+      "tempLow": 54,
+      "condition": "🌦️",
+      "description": "Drizzle",
+      "humidity": 63,
+      "wind": "16 mph",
       "uvIndex": 5,
-      "rainChance": 25,
+      "rainChance": 40,
       "sunrise": "6:45 AM",
       "sunset": "6:18 PM",
       "rawDate": "2026-10-05",
@@ -167,20 +135,20 @@
           }
         ]
       },
-      "oceanTemp": 63,
+      "oceanTemp": 62,
       "bridgeOpenings": [],
-      "isMoodDay": true
+      "isMoodDay": false
     },
     {
       "date": "Tue, Oct 6",
-      "temp": 59,
+      "temp": 60,
       "tempLow": 44,
       "condition": "☀️",
       "description": "Clear",
-      "humidity": 39,
-      "wind": "15 mph",
+      "humidity": 41,
+      "wind": "13 mph",
       "uvIndex": 5,
-      "rainChance": 1,
+      "rainChance": 0,
       "sunrise": "6:46 AM",
       "sunset": "6:16 PM",
       "rawDate": "2026-10-06",
@@ -208,16 +176,16 @@
       },
       "oceanTemp": 62,
       "bridgeOpenings": [],
-      "isMoodDay": false
+      "isMoodDay": true
     },
     {
       "date": "Wed, Oct 7",
-      "temp": 64,
+      "temp": 66,
       "tempLow": 44,
       "condition": "☀️",
       "description": "Clear",
-      "humidity": 40,
-      "wind": "8 mph",
+      "humidity": 44,
+      "wind": "10 mph",
       "uvIndex": 5,
       "rainChance": 0,
       "sunrise": "6:47 AM",
@@ -251,12 +219,12 @@
     },
     {
       "date": "Thu, Oct 8",
-      "temp": 69,
-      "tempLow": 49,
+      "temp": 71,
+      "tempLow": 53,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 61,
-      "wind": "14 mph",
+      "humidity": 70,
+      "wind": "15 mph",
       "uvIndex": 4,
       "rainChance": 1,
       "sunrise": "6:48 AM",
@@ -281,6 +249,45 @@
           {
             "time": "4:10 PM",
             "height": "0.3"
+          }
+        ]
+      },
+      "oceanTemp": 61,
+      "bridgeOpenings": [],
+      "isMoodDay": false
+    },
+    {
+      "date": "Fri, Oct 9",
+      "temp": 70,
+      "tempLow": 56,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 55,
+      "wind": "11 mph",
+      "uvIndex": 5,
+      "rainChance": 4,
+      "sunrise": "6:49 AM",
+      "sunset": "6:11 PM",
+      "rawDate": "2026-10-09",
+      "tides": {
+        "high": [
+          {
+            "time": "10:52 AM",
+            "height": "10.4"
+          },
+          {
+            "time": "11:16 PM",
+            "height": "10.3"
+          }
+        ],
+        "low": [
+          {
+            "time": "4:37 AM",
+            "height": "0.1"
+          },
+          {
+            "time": "5:01 PM",
+            "height": "-0.1"
           }
         ]
       },

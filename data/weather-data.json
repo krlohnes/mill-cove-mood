@@ -1,65 +1,18 @@
 {
-  "lastUpdated": "2026-10-11T11:19:10.470Z",
+  "lastUpdated": "2026-10-12T12:54:37.350Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "Open-Meteo, NOAA & foreriverbridge.com",
   "data": [
     {
       "date": "Today",
-      "temp": 64,
-      "tempLow": 40,
-      "condition": "🌧️",
-      "description": "Rain",
-      "humidity": 77,
-      "wind": "8 mph",
-      "uvIndex": 2,
-      "rainChance": 93,
-      "sunrise": "6:51 AM",
-      "sunset": "6:08 PM",
-      "rawDate": "2026-10-11",
-      "tides": {
-        "high": [
-          {
-            "time": "12:02 AM",
-            "height": "10.2"
-          },
-          {
-            "time": "12:15 PM",
-            "height": "10.7"
-          }
-        ],
-        "low": [
-          {
-            "time": "6:04 AM",
-            "height": "0.3"
-          },
-          {
-            "time": "6:32 PM",
-            "height": "-0.3"
-          }
-        ]
-      },
-      "oceanTemp": 60,
-      "bridgeOpenings": [
-        {
-          "time": "7:00 AM",
-          "vessel": "CB PACIFIC",
-          "vesselType": "Tanker",
-          "direction": "outbound",
-          "timestamp": "2026-10-11T11:00:00.000Z"
-        }
-      ],
-      "isMoodDay": false
-    },
-    {
-      "date": "Mon, Oct 12",
       "temp": 66,
-      "tempLow": 54,
+      "tempLow": 51,
       "condition": "🌧️",
       "description": "Rain",
       "humidity": 91,
-      "wind": "14 mph",
+      "wind": "11 mph",
       "uvIndex": 5,
-      "rainChance": 93,
+      "rainChance": 98,
       "sunrise": "6:53 AM",
       "sunset": "6:06 PM",
       "rawDate": "2026-10-12",
@@ -92,13 +45,13 @@
     {
       "date": "Tue, Oct 13",
       "temp": 61,
-      "tempLow": 54,
-      "condition": "🌦️",
-      "description": "Drizzle",
-      "humidity": 82,
+      "tempLow": 52,
+      "condition": "🌧️",
+      "description": "Rain",
+      "humidity": 90,
       "wind": "14 mph",
-      "uvIndex": 2,
-      "rainChance": 50,
+      "uvIndex": 1,
+      "rainChance": 59,
       "sunrise": "6:54 AM",
       "sunset": "6:05 PM",
       "rawDate": "2026-10-13",
@@ -130,14 +83,14 @@
     },
     {
       "date": "Wed, Oct 14",
-      "temp": 77,
-      "tempLow": 62,
+      "temp": 75,
+      "tempLow": 61,
       "condition": "🌦️",
       "description": "Drizzle",
-      "humidity": 69,
-      "wind": "15 mph",
-      "uvIndex": 5,
-      "rainChance": 50,
+      "humidity": 78,
+      "wind": "12 mph",
+      "uvIndex": 4,
+      "rainChance": 59,
       "sunrise": "6:55 AM",
       "sunset": "6:03 PM",
       "rawDate": "2026-10-14",
@@ -170,13 +123,13 @@
     {
       "date": "Thu, Oct 15",
       "temp": 61,
-      "tempLow": 50,
+      "tempLow": 51,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 49,
-      "wind": "17 mph",
+      "humidity": 60,
+      "wind": "15 mph",
       "uvIndex": 5,
-      "rainChance": 5,
+      "rainChance": 3,
       "sunrise": "6:56 AM",
       "sunset": "6:01 PM",
       "rawDate": "2026-10-15",
@@ -208,14 +161,14 @@
     },
     {
       "date": "Fri, Oct 16",
-      "temp": 63,
-      "tempLow": 47,
-      "condition": "🌦️",
-      "description": "Drizzle",
-      "humidity": 62,
-      "wind": "19 mph",
-      "uvIndex": 2,
-      "rainChance": 32,
+      "temp": 64,
+      "tempLow": 49,
+      "condition": "🌧️",
+      "description": "Rain Showers",
+      "humidity": 80,
+      "wind": "18 mph",
+      "uvIndex": 1,
+      "rainChance": 67,
       "sunrise": "6:57 AM",
       "sunset": "6:00 PM",
       "rawDate": "2026-10-16",
@@ -241,20 +194,20 @@
           }
         ]
       },
-      "oceanTemp": 59,
+      "oceanTemp": 60,
       "bridgeOpenings": [],
       "isMoodDay": false
     },
     {
       "date": "Sat, Oct 17",
-      "temp": 67,
-      "tempLow": 49,
+      "temp": 54,
+      "tempLow": 37,
       "condition": "🌦️",
       "description": "Drizzle",
-      "humidity": 79,
+      "humidity": 61,
       "wind": "18 mph",
-      "uvIndex": 2,
-      "rainChance": 32,
+      "uvIndex": 3,
+      "rainChance": 45,
       "sunrise": "6:58 AM",
       "sunset": "5:58 PM",
       "rawDate": "2026-10-17",
@@ -280,7 +233,42 @@
           }
         ]
       },
-      "oceanTemp": 59,
+      "oceanTemp": 58,
+      "bridgeOpenings": [],
+      "isMoodDay": false
+    },
+    {
+      "date": "Sun, Oct 18",
+      "temp": 54,
+      "tempLow": 33,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 46,
+      "wind": "13 mph",
+      "uvIndex": 4,
+      "rainChance": 5,
+      "sunrise": "7:00 AM",
+      "sunset": "5:57 PM",
+      "rawDate": "2026-10-18",
+      "tides": {
+        "high": [
+          {
+            "time": "5:26 AM",
+            "height": "8.0"
+          },
+          {
+            "time": "5:33 PM",
+            "height": "8.9"
+          }
+        ],
+        "low": [
+          {
+            "time": "11:19 AM",
+            "height": "2.5"
+          }
+        ]
+      },
+      "oceanTemp": 57,
       "bridgeOpenings": [],
       "isMoodDay": false
     }

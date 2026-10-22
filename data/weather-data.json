@@ -1,50 +1,11 @@
 {
-  "lastUpdated": "2026-10-21T09:55:14.688Z",
+  "lastUpdated": "2026-10-22T09:55:36.968Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "Open-Meteo, NOAA & foreriverbridge.com",
   "data": [
     {
       "date": "Today",
-      "temp": 53,
-      "tempLow": 48,
-      "condition": "⛅",
-      "description": "Partly Cloudy",
-      "humidity": 76,
-      "wind": "15 mph",
-      "uvIndex": 2,
-      "rainChance": 0,
-      "sunrise": "7:03 AM",
-      "sunset": "5:52 PM",
-      "rawDate": "2026-10-21",
-      "tides": {
-        "high": [
-          {
-            "time": "8:06 AM",
-            "height": "8.6"
-          },
-          {
-            "time": "8:19 PM",
-            "height": "9.1"
-          }
-        ],
-        "low": [
-          {
-            "time": "1:46 AM",
-            "height": "1.5"
-          },
-          {
-            "time": "2:05 PM",
-            "height": "1.9"
-          }
-        ]
-      },
-      "oceanTemp": 57,
-      "bridgeOpenings": [],
-      "isMoodDay": false
-    },
-    {
-      "date": "Thu, Oct 22",
-      "temp": 58,
+      "temp": 57,
       "tempLow": 47,
       "condition": "⛅",
       "description": "Partly Cloudy",
@@ -83,14 +44,14 @@
     },
     {
       "date": "Fri, Oct 23",
-      "temp": 55,
-      "tempLow": 45,
+      "temp": 49,
+      "tempLow": 41,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 49,
+      "humidity": 60,
       "wind": "15 mph",
       "uvIndex": 4,
-      "rainChance": 1,
+      "rainChance": 0,
       "sunrise": "7:05 AM",
       "sunset": "5:49 PM",
       "rawDate": "2026-10-23",
@@ -123,13 +84,13 @@
     {
       "date": "Sat, Oct 24",
       "temp": 60,
-      "tempLow": 43,
+      "tempLow": 41,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 51,
-      "wind": "8 mph",
+      "humidity": 49,
+      "wind": "7 mph",
       "uvIndex": 4,
-      "rainChance": 1,
+      "rainChance": 0,
       "sunrise": "7:07 AM",
       "sunset": "5:47 PM",
       "rawDate": "2026-10-24",
@@ -162,10 +123,10 @@
     {
       "date": "Sun, Oct 25",
       "temp": 64,
-      "tempLow": 44,
+      "tempLow": 45,
       "condition": "☀️",
       "description": "Clear",
-      "humidity": 50,
+      "humidity": 47,
       "wind": "7 mph",
       "uvIndex": 4,
       "rainChance": 0,
@@ -200,14 +161,14 @@
     },
     {
       "date": "Mon, Oct 26",
-      "temp": 67,
+      "temp": 69,
       "tempLow": 47,
-      "condition": "☀️",
-      "description": "Clear",
-      "humidity": 54,
-      "wind": "8 mph",
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 56,
+      "wind": "10 mph",
       "uvIndex": 4,
-      "rainChance": 1,
+      "rainChance": 0,
       "sunrise": "7:09 AM",
       "sunset": "5:45 PM",
       "rawDate": "2026-10-26",
@@ -235,14 +196,14 @@
     },
     {
       "date": "Tue, Oct 27",
-      "temp": 56,
-      "tempLow": 49,
-      "condition": "🌦️",
-      "description": "Drizzle",
-      "humidity": 76,
-      "wind": "11 mph",
-      "uvIndex": 2,
-      "rainChance": 3,
+      "temp": 57,
+      "tempLow": 45,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 40,
+      "wind": "10 mph",
+      "uvIndex": 4,
+      "rainChance": 2,
       "sunrise": "7:10 AM",
       "sunset": "5:43 PM",
       "rawDate": "2026-10-27",
@@ -264,6 +225,45 @@
           },
           {
             "time": "6:49 PM",
+            "height": "-1.1"
+          }
+        ]
+      },
+      "oceanTemp": 55,
+      "bridgeOpenings": [],
+      "isMoodDay": false
+    },
+    {
+      "date": "Wed, Oct 28",
+      "temp": 51,
+      "tempLow": 44,
+      "condition": "🌦️",
+      "description": "Drizzle",
+      "humidity": 57,
+      "wind": "6 mph",
+      "uvIndex": 2,
+      "rainChance": 2,
+      "sunrise": "7:11 AM",
+      "sunset": "5:42 PM",
+      "rawDate": "2026-10-28",
+      "tides": {
+        "high": [
+          {
+            "time": "12:58 AM",
+            "height": "10.1"
+          },
+          {
+            "time": "1:08 PM",
+            "height": "11.6"
+          }
+        ],
+        "low": [
+          {
+            "time": "6:59 AM",
+            "height": "0.0"
+          },
+          {
+            "time": "7:38 PM",
             "height": "-1.1"
           }
         ]

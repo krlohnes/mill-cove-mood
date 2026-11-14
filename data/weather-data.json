@@ -1,65 +1,18 @@
 {
-  "lastUpdated": "2026-11-13T12:55:40.996Z",
+  "lastUpdated": "2026-11-14T12:35:47.671Z",
   "location": "Weymouth, MA (Mill Cove)",
   "source": "Open-Meteo, NOAA & foreriverbridge.com",
   "data": [
     {
       "date": "Today",
-      "temp": 45,
-      "tempLow": 34,
-      "condition": "🌧️",
-      "description": "Rain",
-      "humidity": 86,
-      "wind": "17 mph",
-      "uvIndex": 2,
-      "rainChance": 96,
-      "sunrise": "6:31 AM",
-      "sunset": "4:23 PM",
-      "rawDate": "2026-11-13",
-      "tides": {
-        "high": [
-          {
-            "time": "1:30 AM",
-            "height": "8.6"
-          },
-          {
-            "time": "1:30 PM",
-            "height": "9.7"
-          }
-        ],
-        "low": [
-          {
-            "time": "7:20 AM",
-            "height": "1.8"
-          },
-          {
-            "time": "7:57 PM",
-            "height": "0.8"
-          }
-        ]
-      },
-      "oceanTemp": 54,
-      "bridgeOpenings": [
-        {
-          "time": "9:00 AM",
-          "vessel": "CAPE LOOKOUT",
-          "vesselType": "Tug",
-          "direction": "outbound",
-          "timestamp": "2026-11-13T14:00:00.000Z"
-        }
-      ],
-      "isMoodDay": false
-    },
-    {
-      "date": "Sat, Nov 14",
-      "temp": 43,
-      "tempLow": 34,
-      "condition": "🌦️",
-      "description": "Drizzle",
-      "humidity": 81,
+      "temp": 42,
+      "tempLow": 33,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 80,
       "wind": "9 mph",
       "uvIndex": 3,
-      "rainChance": 16,
+      "rainChance": 3,
       "sunrise": "6:33 AM",
       "sunset": "4:22 PM",
       "rawDate": "2026-11-14",
@@ -86,19 +39,34 @@
         ]
       },
       "oceanTemp": 53,
-      "bridgeOpenings": [],
+      "bridgeOpenings": [
+        {
+          "time": "7:03 AM",
+          "vessel": "CAPE LOOKOUT",
+          "vesselType": "Tug/Barge (56)",
+          "direction": "outbound",
+          "timestamp": "2026-11-14T12:03:42.034Z"
+        },
+        {
+          "time": "9:00 AM",
+          "vessel": "CAPE LOOKOUT",
+          "vesselType": "Tug/Barge (56)",
+          "direction": "inbound",
+          "timestamp": "2026-11-14T14:00:00.000Z"
+        }
+      ],
       "isMoodDay": false
     },
     {
       "date": "Sun, Nov 15",
-      "temp": 48,
-      "tempLow": 37,
+      "temp": 45,
+      "tempLow": 33,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 62,
-      "wind": "13 mph",
+      "humidity": 80,
+      "wind": "12 mph",
       "uvIndex": 3,
-      "rainChance": 0,
+      "rainChance": 3,
       "sunrise": "6:34 AM",
       "sunset": "4:21 PM",
       "rawDate": "2026-11-15",
@@ -130,12 +98,12 @@
     },
     {
       "date": "Mon, Nov 16",
-      "temp": 50,
-      "tempLow": 38,
-      "condition": "☀️",
-      "description": "Clear",
+      "temp": 49,
+      "tempLow": 37,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
       "humidity": 61,
-      "wind": "9 mph",
+      "wind": "8 mph",
       "uvIndex": 3,
       "rainChance": 0,
       "sunrise": "6:35 AM",
@@ -169,11 +137,11 @@
     },
     {
       "date": "Tue, Nov 17",
-      "temp": 54,
+      "temp": 53,
       "tempLow": 37,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 57,
+      "humidity": 59,
       "wind": "7 mph",
       "uvIndex": 3,
       "rainChance": 0,
@@ -208,12 +176,12 @@
     },
     {
       "date": "Wed, Nov 18",
-      "temp": 57,
-      "tempLow": 41,
+      "temp": 58,
+      "tempLow": 42,
       "condition": "⛅",
       "description": "Partly Cloudy",
       "humidity": 56,
-      "wind": "6 mph",
+      "wind": "9 mph",
       "uvIndex": 3,
       "rainChance": 0,
       "sunrise": "6:37 AM",
@@ -248,13 +216,13 @@
     {
       "date": "Thu, Nov 19",
       "temp": 60,
-      "tempLow": 44,
+      "tempLow": 43,
       "condition": "⛅",
       "description": "Partly Cloudy",
-      "humidity": 52,
-      "wind": "7 mph",
+      "humidity": 54,
+      "wind": "8 mph",
       "uvIndex": 3,
-      "rainChance": 1,
+      "rainChance": 0,
       "sunrise": "6:39 AM",
       "sunset": "4:18 PM",
       "rawDate": "2026-11-19",
@@ -273,6 +241,45 @@
           {
             "time": "12:25 PM",
             "height": "1.6"
+          }
+        ]
+      },
+      "oceanTemp": 51,
+      "bridgeOpenings": [],
+      "isMoodDay": true
+    },
+    {
+      "date": "Fri, Nov 20",
+      "temp": 60,
+      "tempLow": 47,
+      "condition": "⛅",
+      "description": "Partly Cloudy",
+      "humidity": 58,
+      "wind": "11 mph",
+      "uvIndex": 3,
+      "rainChance": 1,
+      "sunrise": "6:40 AM",
+      "sunset": "4:18 PM",
+      "rawDate": "2026-11-20",
+      "tides": {
+        "high": [
+          {
+            "time": "7:04 AM",
+            "height": "9.3"
+          },
+          {
+            "time": "7:27 PM",
+            "height": "9.1"
+          }
+        ],
+        "low": [
+          {
+            "time": "12:47 AM",
+            "height": "1.2"
+          },
+          {
+            "time": "1:18 PM",
+            "height": "1.1"
           }
         ]
       },
